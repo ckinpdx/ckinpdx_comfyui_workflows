@@ -2,6 +2,8 @@
 
 LTX Video 2.3 workflows built in the ComfyUI UI, structured for clean export to API format. No Get/Set nodes or subgraphs are used, as these do not survive the UI→API conversion.
 
+These workflows prioritize quality over efficiency and are built for high-end hardware (RTX 5090, 96GB DDR5 RAM). They reflect the creator's ongoing research into techniques and approaches gathered from community workflows across the internet.
+
 Core pipeline: two-stage latent upsampling with RTX Video Super Resolution output.
 
 ## Naming Convention
