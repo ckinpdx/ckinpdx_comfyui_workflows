@@ -48,15 +48,23 @@ HuMo workflows additionally include:
 ## Dependencies
 
 ### All workflows
-Standard ComfyUI with LTX Video 2.3 model support.
 
-### HuMo workflows
-Requires two additional custom node packs:
+| Node Pack | Nodes Used | Repo |
+|-----------|-----------|------|
+| **ComfyUI-LTXVideo** | All `LTXV*` / `LTX2*` nodes | https://github.com/Lightricks/ComfyUI-LTXVideo |
+| **ComfyUI-KJNodes** | `VAELoaderKJ`, `DiffusionModelLoaderKJ`, `ManualSigmas`, `GuiderParameters`, `GetImageSize`, `GetImageSizeAndCount`, `GetImageRangeFromBatch`, `VRAM_Debug` | https://github.com/kijai/ComfyUI-KJNodes |
+| **RES4LYF** | `ClownSampler_Beta`, `ClownsharKSampler_Beta`, `ClownOptions_ExtraOptions_Beta`, `Sigmas Resample`, `Sigmas Rescale`, `Sigmas Split Value`, `Linear Quadratic Advanced`, `FloatConstant` | https://github.com/ClownsharkBatwing/RES4LYF |
+| **ComfyUI_essentials** | `SimpleMath+` | https://github.com/cubiq/ComfyUI_essentials |
+| **ComfyUI-VideoHelperSuite** | `VHS_LoadAudioUpload` | https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite |
+| **comfyui-various** | `JWImageResizeByLongerSide` | https://github.com/jamesWalker55/comfyui-various |
+| **Nvidia RTX Nodes** | `RTXVideoSuperResolution` | https://github.com/Comfy-Org/Nvidia_RTX_Nodes_ComfyUI |
 
-**WanExperiments** (HuMo nodes):
-https://github.com/drozbay/WanExperiments
+### HuMo workflows (additional)
 
-**ComfyUI-FPSChange** (FPS downsampling):
-https://github.com/ckinpdx/ComfyUI-FPSChange
+| Node Pack | Nodes Used | Repo |
+|-----------|-----------|------|
+| **WanExperiments** | `WanEx_HuMoImageToVideo`, `WanEx_ContextWindowsAdvanced` | https://github.com/drozbay/WanExperiments |
+| **ComfyUI-MelBandRoFormer** | `MelBandRoFormerModelLoader`, `MelBandRoFormerSampler` | https://github.com/kijai/ComfyUI-MelBandRoFormer |
+| **ComfyUI-FPSChange** | `ImageBatchChangeFPS` | https://github.com/ckinpdx/ComfyUI-FPSChange |
 
 > The FPS node is required because these workflows generate at 50 FPS for quality, but HuMo's motion module expects 25 FPS input.
