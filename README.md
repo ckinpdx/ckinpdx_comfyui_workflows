@@ -1,0 +1,1 @@
+Any HuMo included workflows require nodes found here, without which the process isn't possible. All credit to the creator. https://github.com/drozbay/WanExperiments. They also require the deinterpolation node found here, as I generate in 50 FPS in LTX for better quality, but HuMo requires 25 FPS. https://github.com/ckinpdx/ComfyUI-FPSChange
