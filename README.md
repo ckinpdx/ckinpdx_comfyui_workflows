@@ -19,6 +19,7 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 | `T2V` | Text to Video |
 | `I2V` | Image to Video (image as start frame) |
 | `AI2V` | Audio + Image to Video (image start frame + audio file) |
+| `continuation` | Video temporal inpainting — loads an existing video and regenerates a user-defined time window within it |
 | `HuMo` | Includes human motion module (see dependencies) |
 | `_API` | Structured for API export (no Get/Set nodes or subgraphs) |
 
@@ -33,6 +34,8 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 | `LTX23I2VHuMo_API.json` | Image-to-video with HuMo human motion. |
 | `LTX23AI2V_HuMoAPI.json` | Audio + image-to-video with HuMo human motion. |
 | `HQ_LTX23AI2V_HuMoAPI.json` | High quality variant of AI2V + HuMo. |
+| `LTX23continuation_API.json` | Temporal inpainting — loads a video and regenerates a specified time range. |
+| `LTX23continuationHuMo_API.json` | Temporal inpainting with HuMo human motion. |
 
 ## Node Color Coding
 
@@ -69,8 +72,9 @@ HuMo workflows additionally include:
 | **ComfyUI-LTXVideo** | All `LTXV*` / `LTX2*` nodes | https://github.com/Lightricks/ComfyUI-LTXVideo |
 | **ComfyUI-KJNodes** | `VAELoaderKJ`, `DiffusionModelLoaderKJ`, `ManualSigmas`, `GuiderParameters`, `GetImageSize`, `GetImageSizeAndCount`, `GetImageRangeFromBatch`, `VRAM_Debug` | https://github.com/kijai/ComfyUI-KJNodes |
 | **RES4LYF** | `ClownSampler_Beta`, `ClownsharKSampler_Beta`, `ClownOptions_ExtraOptions_Beta`, `Sigmas Resample`, `Sigmas Rescale`, `Sigmas Split Value`, `Linear Quadratic Advanced`, `FloatConstant` | https://github.com/ClownsharkBatwing/RES4LYF |
-| **ComfyUI_essentials** | `SimpleMath+` | https://github.com/cubiq/ComfyUI_essentials |
-| **ComfyUI-VideoHelperSuite** | `VHS_LoadAudioUpload` | https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite |
+| **ComfyUI_essentials** | `SimpleMath+`, `ImageFromBatch` | https://github.com/cubiq/ComfyUI_essentials |
+| **ComfyUI-VideoHelperSuite** | `VHS_LoadAudioUpload`, `VHS_LoadVideo`, `VHS_VideoInfoSource` | https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite |
+| **ComfyUI-WanVideoWrapper** | `NormalizeAudioLoudness` | https://github.com/kijai/ComfyUI-WanVideoWrapper |
 | **comfyui-various** | `JWImageResizeByLongerSide` | https://github.com/jamesWalker55/comfyui-various |
 | **Nvidia RTX Nodes** | `RTXVideoSuperResolution` | https://github.com/Comfy-Org/Nvidia_RTX_Nodes_ComfyUI |
 
