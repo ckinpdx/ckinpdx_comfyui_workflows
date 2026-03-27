@@ -3436,47 +3436,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 375,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -2500,
-        6210
-      ],
-      "size": [
-        400,
-        200
-      ],
-      "flags": {},
-      "order": 17,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            923
-          ]
-        }
-      ],
-      "title": "FADE: Positive Prompt",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.15.1",
-        "Node name for S&R": "PrimitiveStringMultiline",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "the woman smiles at the camera while the background music plays, and she says \"sometimes I pee in the water when its too cold.... it's a public service. you're welcome\". the view of the woman is clear with no obstructions"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 307,
       "type": "SaveVideo",
       "pos": [
@@ -3528,7 +3487,7 @@
         82
       ],
       "flags": {},
-      "order": 18,
+      "order": 17,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3570,7 +3529,7 @@
         100
       ],
       "flags": {},
-      "order": 19,
+      "order": 18,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -3652,6 +3611,47 @@
       },
       "widgets_values": [
         "(a + b - ((a - b) * (a - b)) ** 0.5) / 2"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 375,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -2500,
+        6210
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            923
+          ]
+        }
+      ],
+      "title": "FADE: Positive Prompt",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.15.1",
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        ""
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -4407,10 +4407,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.22582462163545472,
+      "scale": 0.6443040006390862,
       "offset": [
-        5289.379374947151,
-        -3660.9776765278907
+        3538.5992247280883,
+        -5308.529713695479
       ]
     },
     "frontendVersion": "1.39.19",
