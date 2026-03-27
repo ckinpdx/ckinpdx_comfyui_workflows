@@ -63,6 +63,8 @@ HuMo workflows additionally include:
 - **WanEx_HuMoImageToVideo** — human motion conditioning
 - **ImageBatchChangeFPS** — downsamples 50 FPS generation to 25 FPS required by HuMo
 
+The **HuMo Long Edge** input controls the resolution fed to the HuMo model. Recommended values: `1280`, `1536`, `1920`, `2560`.
+
 ## Dependencies
 
 ### All workflows
