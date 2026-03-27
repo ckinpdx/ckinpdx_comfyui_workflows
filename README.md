@@ -1,6 +1,8 @@
 # ckinpdx ComfyUI Workflows
 
-LTX Video 2.3 workflows in API format, built around a two-stage latent upsampling pipeline with RTX Video Super Resolution output.
+LTX Video 2.3 workflows built in the ComfyUI UI, structured for clean export to API format. No Get/Set nodes or subgraphs are used, as these do not survive the UI→API conversion.
+
+Core pipeline: two-stage latent upsampling with RTX Video Super Resolution output.
 
 ## Naming Convention
 
@@ -16,7 +18,7 @@ LTX Video 2.3 workflows in API format, built around a two-stage latent upsamplin
 | `I2V` | Image to Video (image as start frame) |
 | `AI2V` | Audio + Image to Video (image start frame + audio file) |
 | `HuMo` | Includes human motion module (see dependencies) |
-| `_API` | ComfyUI API format |
+| `_API` | Structured for API export (no Get/Set nodes or subgraphs) |
 
 ## Workflows
 
@@ -29,6 +31,17 @@ LTX Video 2.3 workflows in API format, built around a two-stage latent upsamplin
 | `LTX23I2VHuMo_API.json` | Image-to-video with HuMo human motion. |
 | `LTX23AI2V_HuMoAPI.json` | Audio + image-to-video with HuMo human motion. |
 | `HQ_LTX23AI2V_HuMoAPI.json` | High quality variant of AI2V + HuMo. |
+
+## Node Color Coding
+
+Nodes are color coded by role for easier navigation:
+
+| Color | Role |
+|-------|------|
+| 🔴 Red | Model loading |
+| 🟢 Green | User inputs (prompts, images, audio, parameters) |
+| 🟡 Yellow | Generation (sampling, scheduling, conditioning) |
+| 🟣 Purple | Saving / output |
 
 ## Pipeline Features
 
@@ -68,3 +81,29 @@ HuMo workflows additionally include:
 | **ComfyUI-FPSChange** | `ImageBatchChangeFPS` | https://github.com/ckinpdx/ComfyUI-FPSChange |
 
 > The FPS node is required because these workflows generate at 50 FPS for quality, but HuMo's motion module expects 25 FPS input.
+
+## Required Models
+
+### All workflows
+
+| Model | Role |
+|-------|------|
+| `ltx-2.3-22b-dev_transformer_only_fp8_scaled.safetensors` | LTX 2.3 22B main diffusion model (fp8) |
+| `gemma_3_12B_it_heretic_fp8_e4m3fn.safetensors` | Gemma 3 12B text encoder |
+| `ltx-2.3-22b-dev_embeddings_connectors.safetensors` | LTX 2.3 embeddings / connector weights |
+| `LTX23_video_vae_bf16.safetensors` | LTX 2.3 video VAE |
+| `LTX23_audio_vae_bf16.safetensors` | LTX 2.3 audio VAE |
+| `ltx-2.3-spatial-upscaler-x2-1.1.safetensors` | LTX 2.3 spatial upscaler (2x) |
+| `ltx-2.3-22b-distilled-lora-384.safetensors` | LTX 2.3 distilled LoRA (loaded twice at different weights for each generation stage) |
+
+### HuMo workflows (additional)
+
+| Model | Role |
+|-------|------|
+| `humo_17B_fp16.safetensors` | HuMo 17B human motion model |
+| `Wan2_1_VAE_bf16.safetensors` | Wan 2.1 VAE (used by HuMo) |
+| `umt5_xxl_fp8_e4m3fn_scaled.safetensors` | UMT5-XXL text encoder (used by HuMo) |
+| `lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors` | LightX2V distilled LoRA |
+| `FaceDetailerV1.safetensors` | Face detail LoRA |
+| `MelBandRoformer_fp16.safetensors` | MelBand RoFormer audio separator |
+| `whisper_large_v3_encoder_fp16.safetensors` | Whisper large-v3 audio encoder |
