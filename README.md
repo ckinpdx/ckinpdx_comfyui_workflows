@@ -80,6 +80,15 @@ The **HuMo Long Edge** input controls the resolution fed to the HuMo model. Reco
 | **comfyui-various** | `JWImageResizeByLongerSide` | https://github.com/jamesWalker55/comfyui-various |
 | **Nvidia RTX Nodes** | `RTXVideoSuperResolution` | https://github.com/Comfy-Org/Nvidia_RTX_Nodes_ComfyUI |
 
+> **NormalizeAudioLoudness bug:** If the audio input is very short or near-silence, the BS.1770 loudness measurement returns NaN/inf, producing a poisoned tensor that silently passes through and crashes the video save node with `[Errno 22]` during AAC encoding. Fix in `ComfyUI-WanVideoWrapper/nodes_utility.py`:
+> ```python
+> # before
+> if abs(loudness) > 100:
+> # after
+> if not np.isfinite(loudness) or abs(loudness) > 100:
+> ```
+> The node will then return audio unchanged rather than passing a NaN tensor downstream.
+
 ### HuMo workflows (additional)
 
 | Node Pack | Nodes Used | Repo |
