@@ -1,8 +1,8 @@
 {
   "id": "92dce8fc-602b-4b73-99fc-b3a9cad76fd4",
   "revision": 0,
-  "last_node_id": 1425,
-  "last_link_id": 2862,
+  "last_node_id": 1427,
+  "last_link_id": 2864,
   "nodes": [
     {
       "id": 1037,
@@ -58,7 +58,7 @@
         130
       ],
       "flags": {},
-      "order": 60,
+      "order": 61,
       "mode": 0,
       "inputs": [
         {
@@ -107,7 +107,7 @@
         130
       ],
       "flags": {},
-      "order": 43,
+      "order": 44,
       "mode": 0,
       "inputs": [
         {
@@ -156,7 +156,7 @@
         102
       ],
       "flags": {},
-      "order": 53,
+      "order": 54,
       "mode": 0,
       "inputs": [
         {
@@ -267,7 +267,7 @@
         46
       ],
       "flags": {},
-      "order": 48,
+      "order": 49,
       "mode": 0,
       "inputs": [
         {
@@ -318,7 +318,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 23,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -368,7 +368,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 38,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -519,7 +519,7 @@
         82
       ],
       "flags": {},
-      "order": 28,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -574,7 +574,7 @@
         66
       ],
       "flags": {},
-      "order": 69,
+      "order": 70,
       "mode": 0,
       "inputs": [
         {
@@ -635,7 +635,7 @@
         66
       ],
       "flags": {},
-      "order": 67,
+      "order": 68,
       "mode": 0,
       "inputs": [
         {
@@ -703,7 +703,7 @@
         50
       ],
       "flags": {},
-      "order": 33,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -755,7 +755,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 27,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -812,7 +812,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 37,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -869,7 +869,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 49,
+      "order": 50,
       "mode": 0,
       "inputs": [
         {
@@ -944,7 +944,7 @@
         46
       ],
       "flags": {},
-      "order": 58,
+      "order": 59,
       "mode": 0,
       "inputs": [
         {
@@ -993,7 +993,7 @@
         46
       ],
       "flags": {},
-      "order": 35,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -1047,7 +1047,7 @@
         82
       ],
       "flags": {},
-      "order": 63,
+      "order": 64,
       "mode": 0,
       "inputs": [
         {
@@ -1305,7 +1305,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 46,
+      "order": 47,
       "mode": 0,
       "inputs": [
         {
@@ -1352,7 +1352,7 @@
         58
       ],
       "flags": {},
-      "order": 24,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -1401,7 +1401,7 @@
         82
       ],
       "flags": {},
-      "order": 42,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
@@ -1451,7 +1451,7 @@
         82
       ],
       "flags": {},
-      "order": 52,
+      "order": 53,
       "mode": 0,
       "inputs": [
         {
@@ -1501,7 +1501,7 @@
         274
       ],
       "flags": {},
-      "order": 59,
+      "order": 60,
       "mode": 0,
       "inputs": [
         {
@@ -2047,7 +2047,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 36,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -2114,7 +2114,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 32,
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -2179,7 +2179,7 @@
         154
       ],
       "flags": {},
-      "order": 55,
+      "order": 56,
       "mode": 0,
       "inputs": [
         {
@@ -2231,7 +2231,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 51,
+      "order": 52,
       "mode": 0,
       "inputs": [
         {
@@ -2301,7 +2301,7 @@
         82
       ],
       "flags": {},
-      "order": 29,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -2364,7 +2364,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 47,
+      "order": 48,
       "mode": 0,
       "inputs": [
         {
@@ -2464,7 +2464,7 @@
         82
       ],
       "flags": {},
-      "order": 30,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -2525,7 +2525,7 @@
         154
       ],
       "flags": {},
-      "order": 56,
+      "order": 57,
       "mode": 0,
       "inputs": [
         {
@@ -2629,7 +2629,7 @@
         226
       ],
       "flags": {},
-      "order": 31,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -2685,7 +2685,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 62,
+      "order": 63,
       "mode": 0,
       "inputs": [
         {
@@ -2981,7 +2981,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 50,
+      "order": 51,
       "mode": 0,
       "inputs": [
         {
@@ -3042,7 +3042,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 44,
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
@@ -3103,7 +3103,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 26,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -3161,7 +3161,7 @@
         154
       ],
       "flags": {},
-      "order": 64,
+      "order": 65,
       "mode": 0,
       "inputs": [
         {
@@ -3379,7 +3379,7 @@
         174
       ],
       "flags": {},
-      "order": 40,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -3474,7 +3474,7 @@
         58
       ],
       "flags": {},
-      "order": 25,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -3520,7 +3520,7 @@
         122
       ],
       "flags": {},
-      "order": 57,
+      "order": 58,
       "mode": 0,
       "inputs": [
         {
@@ -3573,122 +3573,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 1422,
-      "type": "ClownSampler_Beta",
-      "pos": [
-        1070,
-        5070
-      ],
-      "size": [
-        210,
-        174
-      ],
-      "flags": {},
-      "order": 41,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "guides",
-          "shape": 7,
-          "type": "GUIDES",
-          "link": null
-        },
-        {
-          "name": "options",
-          "shape": 7,
-          "type": "OPTIONS",
-          "link": null
-        },
-        {
-          "name": "seed",
-          "type": "INT",
-          "widget": {
-            "name": "seed"
-          },
-          "link": 2862
-        }
-      ],
-      "outputs": [
-        {
-          "name": "sampler",
-          "type": "SAMPLER",
-          "links": [
-            2854
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "RES4LYF",
-        "ver": "0dc91c00c4c3fb38e7874fcd7a2a327765e8882c",
-        "Node name for S&R": "ClownSampler_Beta",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.7",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        0.25,
-        "exponential/res_2s",
-        94,
-        "fixed",
-        true
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 1423,
-      "type": "LTXVScheduler",
-      "pos": [
-        1070,
-        5290
-      ],
-      "size": [
-        210,
-        154
-      ],
-      "flags": {},
-      "order": 72,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "latent",
-          "shape": 7,
-          "type": "LATENT",
-          "link": 2857
-        }
-      ],
-      "outputs": [
-        {
-          "name": "SIGMAS",
-          "type": "SIGMAS",
-          "links": [
-            2856
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.16.4",
-        "Node name for S&R": "LTXVScheduler",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.7",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        3,
-        2.05,
-        0.95,
-        true,
-        0.1
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 1350,
       "type": "LTXVConcatAVLatent",
       "pos": [
@@ -3702,7 +3586,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 71,
+      "order": 72,
       "mode": 0,
       "inputs": [
         {
@@ -3721,8 +3605,7 @@
           "name": "latent",
           "type": "LATENT",
           "links": [
-            2669,
-            2857
+            2669
           ]
         }
       ],
@@ -3759,7 +3642,7 @@
         46
       ],
       "flags": {},
-      "order": 34,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -3809,7 +3692,7 @@
         46
       ],
       "flags": {},
-      "order": 70,
+      "order": 71,
       "mode": 0,
       "inputs": [
         {
@@ -3858,7 +3741,7 @@
         46
       ],
       "flags": {},
-      "order": 54,
+      "order": 55,
       "mode": 0,
       "inputs": [
         {
@@ -3909,7 +3792,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 45,
+      "order": 46,
       "mode": 0,
       "inputs": [
         {
@@ -4026,12 +3909,12 @@
         {
           "name": "sampler",
           "type": "SAMPLER",
-          "link": 2854
+          "link": 2863
         },
         {
           "name": "sigmas",
           "type": "SIGMAS",
-          "link": 2856
+          "link": 2864
         },
         {
           "name": "latent_image",
@@ -4195,7 +4078,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 39,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
@@ -4246,7 +4129,7 @@
         148
       ],
       "flags": {},
-      "order": 61,
+      "order": 62,
       "mode": 0,
       "inputs": [
         {
@@ -4309,7 +4192,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 65,
+      "order": 66,
       "mode": 0,
       "inputs": [
         {
@@ -4387,7 +4270,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 66,
+      "order": 67,
       "mode": 0,
       "inputs": [
         {
@@ -4443,7 +4326,7 @@
         100
       ],
       "flags": {},
-      "order": 68,
+      "order": 69,
       "mode": 0,
       "inputs": [
         {
@@ -4825,8 +4708,7 @@
           "links": [
             2787,
             2789,
-            2861,
-            2862
+            2861
           ]
         }
       ],
@@ -4847,6 +4729,100 @@
       ],
       "color": "#232",
       "bgcolor": "#353"
+    },
+    {
+      "id": 1427,
+      "type": "ManualSigmas",
+      "pos": [
+        1080,
+        5270
+      ],
+      "size": [
+        270,
+        70
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            2864
+          ]
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        },
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1",
+        "Node name for S&R": "ManualSigmas",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "0.909375, 0.725, 0.421875, 0.0"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 1426,
+      "type": "KSamplerSelect",
+      "pos": [
+        1080,
+        5160
+      ],
+      "size": [
+        210,
+        70
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            2863
+          ]
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        },
+        "cnr_id": "comfy-core",
+        "ver": "0.3.71",
+        "Node name for S&R": "KSamplerSelect",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "euler_ancestral"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -5771,30 +5747,6 @@
       "LATENT"
     ],
     [
-      2854,
-      1422,
-      0,
-      1355,
-      2,
-      "SAMPLER"
-    ],
-    [
-      2856,
-      1423,
-      0,
-      1355,
-      3,
-      "SIGMAS"
-    ],
-    [
-      2857,
-      1350,
-      0,
-      1423,
-      0,
-      "LATENT"
-    ],
-    [
       2859,
       1348,
       0,
@@ -5819,12 +5771,20 @@
       "INT"
     ],
     [
-      2862,
-      1398,
+      2863,
+      1426,
       0,
-      1422,
+      1355,
       2,
-      "INT"
+      "SAMPLER"
+    ],
+    [
+      2864,
+      1427,
+      0,
+      1355,
+      3,
+      "SIGMAS"
     ]
   ],
   "groups": [],
@@ -6231,10 +6191,10 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 0.3452271214393522,
+      "scale": 0.672749994932643,
       "offset": [
-        2398.095077519072,
-        -2924.170647958268
+        403.54731087902996,
+        -4631.6550117192555
       ]
     }
   },
