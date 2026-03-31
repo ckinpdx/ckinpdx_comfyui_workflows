@@ -2033,73 +2033,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 413,
-      "type": "SimpleMath+",
-      "pos": [
-        -1970,
-        6920
-      ],
-      "size": [
-        270,
-        100
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 41,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "shape": 7,
-          "type": "*",
-          "link": 991
-        },
-        {
-          "name": "b",
-          "shape": 7,
-          "type": "*",
-          "link": 993
-        },
-        {
-          "name": "c",
-          "shape": 7,
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            1005,
-            1046
-          ]
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_essentials",
-        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
-        "Node name for S&R": "SimpleMath+",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "(a + b - ((a - b) * (a - b)) ** 0.5) / 2"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 362,
       "type": "VAEDecode",
       "pos": [
@@ -2455,76 +2388,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 411,
-      "type": "SimpleMath+",
-      "pos": [
-        -1970,
-        6720
-      ],
-      "size": [
-        270,
-        100
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 39,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "shape": 7,
-          "type": "*",
-          "link": 983
-        },
-        {
-          "name": "b",
-          "shape": 7,
-          "type": "*",
-          "link": 988
-        },
-        {
-          "name": "c",
-          "shape": 7,
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            985,
-            1003,
-            1019,
-            1048,
-            1053
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_essentials",
-        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
-        "Node name for S&R": "SimpleMath+",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "(a + b - ((a - b) * (a - b)) ** 0.5) / 2"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 406,
       "type": "Float",
       "pos": [
@@ -2603,272 +2466,6 @@
       },
       "widgets_values": [
         8
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 424,
-      "type": "SimpleMath+",
-      "pos": [
-        -1970,
-        6760
-      ],
-      "size": [
-        270,
-        100
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 46,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "shape": 7,
-          "type": "*",
-          "link": 1047
-        },
-        {
-          "name": "b",
-          "shape": 7,
-          "type": "*",
-          "link": 1048
-        },
-        {
-          "name": "c",
-          "shape": 7,
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            1049
-          ]
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_essentials",
-        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
-        "Node name for S&R": "SimpleMath+",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "a*b"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 425,
-      "type": "SimpleMath+",
-      "pos": [
-        -1970,
-        6800
-      ],
-      "size": [
-        270,
-        100
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 53,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "shape": 7,
-          "type": "*",
-          "link": 1049
-        },
-        {
-          "name": "b",
-          "shape": 7,
-          "type": "*",
-          "link": 1050
-        },
-        {
-          "name": "c",
-          "shape": 7,
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            1052
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_essentials",
-        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
-        "Node name for S&R": "SimpleMath+",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "(a + b - ((a - b) * (a - b)) ** 0.5) / 2"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 427,
-      "type": "SimpleMath+",
-      "pos": [
-        -1970,
-        6840
-      ],
-      "size": [
-        270,
-        100
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 59,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "shape": 7,
-          "type": "*",
-          "link": 1052
-        },
-        {
-          "name": "b",
-          "shape": 7,
-          "type": "*",
-          "link": 1053
-        },
-        {
-          "name": "c",
-          "shape": 7,
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            1055,
-            1056
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_essentials",
-        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
-        "Node name for S&R": "SimpleMath+",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "a/b"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 412,
-      "type": "SimpleMath+",
-      "pos": [
-        -1970,
-        6880
-      ],
-      "size": [
-        270,
-        100
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 40,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "shape": 7,
-          "type": "*",
-          "link": 990
-        },
-        {
-          "name": "b",
-          "shape": 7,
-          "type": "*",
-          "link": 992
-        },
-        {
-          "name": "c",
-          "shape": 7,
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            1004,
-            1045
-          ]
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_essentials",
-        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
-        "Node name for S&R": "SimpleMath+",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "(a + b - ((a - b) * (a - b)) ** 0.5) / 2"
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -3699,13 +3296,13 @@
           "links": null
         },
         {
-          "label": "freemem_before",
+          "label": "14,866,930,660   freemem_before",
           "name": "freemem_before",
           "type": "INT",
           "links": null
         },
         {
-          "label": "freemem_after",
+          "label": "25,849,843,748      freemem_after",
           "name": "freemem_after",
           "type": "INT",
           "links": null
@@ -3971,8 +3568,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            1071,
-            1072
+            1071
           ]
         }
       ],
@@ -4021,7 +3617,7 @@
           "links": []
         },
         {
-          "label": "width",
+          "label": "711 width",
           "name": "width",
           "type": "INT",
           "links": [
@@ -4029,7 +3625,7 @@
           ]
         },
         {
-          "label": "height",
+          "label": "1280 height",
           "name": "height",
           "type": "INT",
           "links": [
@@ -4037,7 +3633,7 @@
           ]
         },
         {
-          "label": "count",
+          "label": "193 count",
           "name": "count",
           "type": "INT",
           "links": [
@@ -4506,130 +4102,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 437,
-      "type": "WanEx_HuMoImageToVideo",
-      "pos": [
-        1450,
-        5840
-      ],
-      "size": [
-        230,
-        280
-      ],
-      "flags": {},
-      "order": 82,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 1067
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 1068
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 1069
-        },
-        {
-          "name": "audio_encoder_output",
-          "shape": 7,
-          "type": "AUDIO_ENCODER_OUTPUT",
-          "link": 1070
-        },
-        {
-          "name": "ref_images",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 1071
-        },
-        {
-          "name": "start_images",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 1072
-        },
-        {
-          "name": "end_images",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "widget": {
-            "name": "width"
-          },
-          "link": 1073
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "widget": {
-            "name": "height"
-          },
-          "link": 1074
-        },
-        {
-          "name": "length",
-          "type": "INT",
-          "widget": {
-            "name": "length"
-          },
-          "link": 1075
-        }
-      ],
-      "outputs": [
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "links": [
-            1080
-          ]
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "links": [
-            1081
-          ]
-        },
-        {
-          "name": "latent",
-          "type": "LATENT",
-          "links": []
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "WanEx_HuMoImageToVideo",
-        "ue_properties": {
-          "widget_ue_connectable": {
-            "width": true,
-            "height": true,
-            "length": true,
-            "batch_size": true,
-            "ref_strength": true
-          },
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        832,
-        480,
-        97,
-        1,
-        1
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 417,
       "type": "Note",
       "pos": [
@@ -4956,6 +4428,533 @@
       ],
       "color": "#322",
       "bgcolor": "#533"
+    },
+    {
+      "id": 411,
+      "type": "SimpleMath+",
+      "pos": [
+        -1970,
+        6720
+      ],
+      "size": [
+        270,
+        100
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "*",
+          "link": 983
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "*",
+          "link": 988
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            985,
+            1003,
+            1019,
+            1048,
+            1053
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "SimpleMath+",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "(a + b - ((a - b) * (a - b)) ** 0.5) / 2"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 424,
+      "type": "SimpleMath+",
+      "pos": [
+        -1970,
+        6760
+      ],
+      "size": [
+        270,
+        100
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "*",
+          "link": 1047
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "*",
+          "link": 1048
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            1049
+          ]
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "SimpleMath+",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "a*b"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 425,
+      "type": "SimpleMath+",
+      "pos": [
+        -1970,
+        6800
+      ],
+      "size": [
+        270,
+        100
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "*",
+          "link": 1049
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "*",
+          "link": 1050
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            1052
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "SimpleMath+",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "(a + b - ((a - b) * (a - b)) ** 0.5) / 2"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 427,
+      "type": "SimpleMath+",
+      "pos": [
+        -1970,
+        6840
+      ],
+      "size": [
+        270,
+        100
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "*",
+          "link": 1052
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "*",
+          "link": 1053
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            1055,
+            1056
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "SimpleMath+",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "a/b"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 412,
+      "type": "SimpleMath+",
+      "pos": [
+        -1970,
+        6880
+      ],
+      "size": [
+        270,
+        100
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "*",
+          "link": 990
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "*",
+          "link": 992
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            1004,
+            1045
+          ]
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "SimpleMath+",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "(a + b - ((a - b) * (a - b)) ** 0.5) / 2"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 413,
+      "type": "SimpleMath+",
+      "pos": [
+        -1970,
+        6920
+      ],
+      "size": [
+        270,
+        100
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "*",
+          "link": 991
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "*",
+          "link": 993
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            1005,
+            1046
+          ]
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "SimpleMath+",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "(a + b - ((a - b) * (a - b)) ** 0.5) / 2"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 437,
+      "type": "WanEx_HuMoImageToVideo",
+      "pos": [
+        1450,
+        5840
+      ],
+      "size": [
+        230,
+        280
+      ],
+      "flags": {},
+      "order": 82,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 1067
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 1068
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 1069
+        },
+        {
+          "name": "audio_encoder_output",
+          "shape": 7,
+          "type": "AUDIO_ENCODER_OUTPUT",
+          "link": 1070
+        },
+        {
+          "name": "ref_images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 1071
+        },
+        {
+          "name": "start_images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "end_images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 1073
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 1074
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": 1075
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            1080
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            1081
+          ]
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WanEx_HuMoImageToVideo",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "width": true,
+            "height": true,
+            "length": true,
+            "batch_size": true,
+            "ref_strength": true
+          },
+          "version": "7.5.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        832,
+        480,
+        97,
+        1,
+        1
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     },
     {
       "id": 375,
@@ -5769,14 +5768,6 @@
       "IMAGE"
     ],
     [
-      1072,
-      446,
-      0,
-      437,
-      5,
-      "IMAGE"
-    ],
-    [
       1073,
       436,
       1,
@@ -5997,10 +5988,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.330629828536475,
+      "scale": 1.0376580360692744,
       "offset": [
-        3611.2124331484642,
-        -4947.634801690878
+        2888.1396866938308,
+        -6019.506250866729
       ]
     },
     "frontendVersion": "1.42.8",
