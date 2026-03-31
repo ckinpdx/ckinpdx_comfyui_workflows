@@ -60,7 +60,7 @@
         110
       ],
       "flags": {},
-      "order": 48,
+      "order": 47,
       "mode": 0,
       "inputs": [
         {
@@ -138,7 +138,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 33,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -187,7 +187,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 49,
+      "order": 48,
       "mode": 0,
       "inputs": [
         {
@@ -247,7 +247,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 19,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -304,7 +304,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 18,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -361,7 +361,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 34,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -408,7 +408,7 @@
         90
       ],
       "flags": {},
-      "order": 31,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -469,7 +469,7 @@
         80
       ],
       "flags": {},
-      "order": 53,
+      "order": 52,
       "mode": 0,
       "inputs": [
         {
@@ -521,7 +521,7 @@
         110
       ],
       "flags": {},
-      "order": 52,
+      "order": 51,
       "mode": 0,
       "inputs": [
         {
@@ -623,7 +623,7 @@
         190
       ],
       "flags": {},
-      "order": 38,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -697,45 +697,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 1416,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1820,
-        4800
-      ],
-      "size": [
-        310,
-        210
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "title": "ID-Lora Prompt Guide",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.18.1",
-        "Node name for S&R": "PrimitiveStringMultiline",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.7",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "[VISUAL]: <scene and appearance description>\n[SPEECH]: <exact words the person should say>\n[SOUNDS]: <speaker vocal style + ambient/environmental sounds>"
-      ],
-      "color": "#346434",
-      "bgcolor": "rgba(24,24,27,.9)"
-    },
-    {
       "id": 784,
       "type": "LoraLoaderModelOnly",
       "pos": [
@@ -747,7 +708,7 @@
         90
       ],
       "flags": {},
-      "order": 30,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -810,7 +771,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 22,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -869,7 +830,7 @@
         110
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -915,7 +876,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 27,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -985,7 +946,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 20,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -1051,7 +1012,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 21,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -1115,7 +1076,7 @@
         100
       ],
       "flags": {},
-      "order": 40,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -1178,7 +1139,7 @@
         100
       ],
       "flags": {},
-      "order": 41,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -1241,7 +1202,7 @@
         50
       ],
       "flags": {},
-      "order": 50,
+      "order": 49,
       "mode": 0,
       "inputs": [
         {
@@ -1290,7 +1251,7 @@
         180
       ],
       "flags": {},
-      "order": 26,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -1355,7 +1316,7 @@
         110
       ],
       "flags": {},
-      "order": 39,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -1405,7 +1366,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 35,
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -1461,7 +1422,7 @@
         70
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1508,7 +1469,7 @@
         90
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1540,7 +1501,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 25,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -1593,7 +1554,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 17,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -1652,7 +1613,7 @@
         130
       ],
       "flags": {},
-      "order": 32,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -1726,7 +1687,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 28,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -1801,7 +1762,7 @@
         90
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1844,7 +1805,7 @@
         200
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1885,7 +1846,7 @@
         210
       ],
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1930,47 +1891,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 1379,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1460,
-        4910
-      ],
-      "size": [
-        400,
-        200
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            2757
-          ]
-        }
-      ],
-      "title": "FADE: positive prompt",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.15.1",
-        "Node name for S&R": "PrimitiveStringMultiline",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "[VISUAL]: a beautiful young white woman with long layered silver hair sits in a bathing suit in front of a makeup mirror.\n[SPEECh]: You could drown a cat in my panties right now.\n[SOUNDS]: she is speaking slowly, quietly and seductively. the room is quiet apart from her words"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 425,
       "type": "PrimitiveInt",
       "pos": [
@@ -1982,7 +1902,7 @@
         90
       ],
       "flags": {},
-      "order": 10,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2027,7 +1947,7 @@
         90
       ],
       "flags": {},
-      "order": 11,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2072,7 +1992,7 @@
         50
       ],
       "flags": {},
-      "order": 45,
+      "order": 44,
       "mode": 0,
       "inputs": [
         {
@@ -2121,7 +2041,7 @@
         160
       ],
       "flags": {},
-      "order": 36,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -2172,7 +2092,7 @@
         160
       ],
       "flags": {},
-      "order": 37,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -2222,7 +2142,7 @@
         180
       ],
       "flags": {},
-      "order": 12,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -2274,7 +2194,7 @@
         90
       ],
       "flags": {},
-      "order": 24,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -2336,7 +2256,7 @@
         60
       ],
       "flags": {},
-      "order": 29,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -2382,7 +2302,7 @@
         50
       ],
       "flags": {},
-      "order": 51,
+      "order": 50,
       "mode": 0,
       "inputs": [
         {
@@ -2431,7 +2351,7 @@
         70
       ],
       "flags": {},
-      "order": 44,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
@@ -2494,7 +2414,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 42,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
@@ -2572,7 +2492,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 43,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -2630,7 +2550,7 @@
         570
       ],
       "flags": {},
-      "order": 23,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -2718,7 +2638,7 @@
         110
       ],
       "flags": {},
-      "order": 13,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2763,7 +2683,7 @@
         130
       ],
       "flags": {},
-      "order": 46,
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
@@ -2837,7 +2757,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 47,
+      "order": 46,
       "mode": 0,
       "inputs": [
         {
@@ -2893,7 +2813,7 @@
         90
       ],
       "flags": {},
-      "order": 14,
+      "order": 12,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2936,7 +2856,7 @@
         60
       ],
       "flags": {},
-      "order": 15,
+      "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2978,7 +2898,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 54,
+      "order": 53,
       "mode": 0,
       "inputs": [
         {
@@ -3019,7 +2939,7 @@
         60
       ],
       "flags": {},
-      "order": 16,
+      "order": 14,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3045,6 +2965,47 @@
       },
       "widgets_values": [
         true
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 1379,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1460,
+        4910
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            2757
+          ]
+        }
+      ],
+      "title": "FADE: positive prompt",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.15.1",
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        ""
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -4064,10 +4025,10 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 0.7400249944258765,
+      "scale": 1.1918176537728193,
       "offset": [
-        1219.2052325382685,
-        -4735.527121319148
+        2018.741165033183,
+        -4571.353605276821
       ]
     }
   },

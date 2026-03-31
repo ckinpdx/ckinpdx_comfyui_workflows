@@ -67,7 +67,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 36,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -3723,7 +3723,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 37,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -4184,48 +4184,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 1379,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1270,
-        4820
-      ],
-      "size": [
-        400,
-        200
-      ],
-      "flags": {},
-      "order": 22,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            2757,
-            2935
-          ]
-        }
-      ],
-      "title": "FADE: positive prompt",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.15.1",
-        "Node name for S&R": "PrimitiveStringMultiline",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "[VISUAL]: a beautiful young white woman with long layered silver hair strolls confidently and briskly down the sidewalk. \n[SPEECH]: Where the hell is the crack in this city??\n[SOUNDS]: the womans tone is intense.  there are the sounds of a busy city street surrounding her."
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 1341,
       "type": "LTXVConcatAVLatent",
       "pos": [
@@ -4367,7 +4325,7 @@
         60
       ],
       "flags": {},
-      "order": 38,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -4413,7 +4371,7 @@
         110
       ],
       "flags": {},
-      "order": 23,
+      "order": 22,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -4588,7 +4546,7 @@
         570
       ],
       "flags": {},
-      "order": 24,
+      "order": 23,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -4765,7 +4723,7 @@
         60
       ],
       "flags": {},
-      "order": 25,
+      "order": 24,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -4792,6 +4750,48 @@
       },
       "widgets_values": [
         true
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 1379,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1270,
+        4820
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            2757,
+            2935
+          ]
+        }
+      ],
+      "title": "FADE: positive prompt",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.15.1",
+        "Node name for S&R": "PrimitiveStringMultiline",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        ""
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -6163,10 +6163,10 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 0.34522712143931455,
+      "scale": 0.7400249944258263,
       "offset": [
-        2690.109728364842,
-        -4551.014412018462
+        1743.784108007443,
+        -4402.883269157459
       ]
     }
   },
