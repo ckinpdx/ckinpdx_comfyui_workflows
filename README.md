@@ -9,7 +9,7 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 ## Naming Convention
 
 ```
-[HQ_] LTX23 [_A-] [TorI2V | continuation] [_IDLora] [_HuMo] _API
+[HQ_] LTX23 [_A-] [TorI2V | _Continuation] [_IDLora] [_HuMo] _API
 ```
 
 | Segment | Meaning |
@@ -18,7 +18,7 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 | `LTX23` | LTX Video 2.3 |
 | `A-` | Audio input |
 | `TorI2V` | T2V or I2V — mode toggled via boolean input (`T2V True` / `I2V False`) |
-| `continuation` | Video temporal inpainting — loads an existing video and regenerates a user-defined time window within it |
+| `_Continuation` | True video continuation — loads an existing video and generates new frames from a specified start point forward |
 | `IDLora` | Identity LoRA — character/face consistency via reference image |
 | `HuMo` | Includes human motion module (see dependencies) |
 | `_API` | Structured for API export (no Get/Set nodes or subgraphs) |
@@ -33,8 +33,8 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 | `LTX23_TorI2V_IDLora_API.json` | T2V or I2V toggle with identity LoRA and reference audio. |
 | `LTX23_TorI2V_IDLora_HuMo_API.json` | T2V or I2V toggle with identity LoRA + HuMo human motion. |
 | `HQ_LTX23AI2V_HuMoAPI.json` | High quality audio + image-to-video with HuMo. |
-| `LTX23continuation_API.json` | Temporal inpainting — loads a video and regenerates a specified time range. |
-| `LTX23continuationHuMo_API.json` | Temporal inpainting with HuMo human motion. |
+| `LTX23_Continuation_API.json` | True video continuation — loads a video and generates new frames from a specified start point. |
+| `LTX23_Continuation_HuMo_API.json` | Video continuation with HuMo human motion. |
 
 ## Node Color Coding
 
