@@ -9,17 +9,17 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 ## Naming Convention
 
 ```
-[HQ_] LTX23 [T2V | I2V | AI2V] [HuMo] _API
+[HQ_] LTX23 [_A-] [TorI2V | continuation] [_IDLora] [_HuMo] _API
 ```
 
 | Segment | Meaning |
 |---------|---------|
 | `HQ_` | Higher quality / resolution variant |
 | `LTX23` | LTX Video 2.3 |
-| `T2V` | Text to Video |
-| `I2V` | Image to Video (image as start frame) |
-| `AI2V` | Audio + Image to Video (image start frame + audio file) |
+| `A-` | Audio input |
+| `TorI2V` | T2V or I2V — mode toggled via boolean input (`T2V True` / `I2V False`) |
 | `continuation` | Video temporal inpainting — loads an existing video and regenerates a user-defined time window within it |
+| `IDLora` | Identity LoRA — character/face consistency via reference image |
 | `HuMo` | Includes human motion module (see dependencies) |
 | `_API` | Structured for API export (no Get/Set nodes or subgraphs) |
 
@@ -27,13 +27,12 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 
 | File | Description |
 |------|-------------|
-| `LTX23T2V_API.json` | Text-to-video. Prompts only, no image input. |
-| `LTX23I2V_API.json` | Image-to-video. Uses a start frame image. |
-| `LTX23AI2V_API.json` | Audio-driven image-to-video. Start frame + audio file guides generation. |
-| `LTX23T2VHuMo_API.json` | Text-to-video with HuMo human motion. |
-| `LTX23I2VHuMo_API.json` | Image-to-video with HuMo human motion. |
-| `LTX23AI2V_HuMoAPI.json` | Audio + image-to-video with HuMo human motion. |
-| `HQ_LTX23AI2V_HuMoAPI.json` | High quality variant of AI2V + HuMo. |
+| `LTX23_TorI2V_API.json` | T2V or I2V toggle. Includes Reasoning LoRA. |
+| `LTX23_A-TorI2V_API.json` | T2V or I2V toggle with audio input. |
+| `LTX23_A-TorI2V_Humo_API.json` | T2V or I2V toggle with audio + HuMo human motion. |
+| `LTX23_TorI2V_IDLora_API.json` | T2V or I2V toggle with identity LoRA and reference audio. |
+| `LTX23_TorI2V_IDLora_HuMo_API.json` | T2V or I2V toggle with identity LoRA + HuMo human motion. |
+| `HQ_LTX23AI2V_HuMoAPI.json` | High quality audio + image-to-video with HuMo. |
 | `LTX23continuation_API.json` | Temporal inpainting — loads a video and regenerates a specified time range. |
 | `LTX23continuationHuMo_API.json` | Temporal inpainting with HuMo human motion. |
 
@@ -53,15 +52,16 @@ Nodes are color coded by role for easier navigation:
 All workflows share:
 - **Two-stage generation** — low-res draft pass → latent upsample → full-res refinement
 - **RTX Video Super Resolution** — final output upscale (requires RTX GPU)
-- **ManualSigmas** — custom sigma schedules for both stages
 - **LTXVChunkFeedForward** — chunked processing for longer clips
 - **ClownSampler / ClownsharKSampler** — advanced sampling
 - **FADE-labeled primitives** — exposed inputs for use with the FADE API layer
 
+`TorI2V` workflows use a **boolean toggle** (`T2V True` / `I2V False`) to switch between text-to-video and image-to-video mode in a single workflow.
+
 HuMo workflows additionally include:
 - **MelBandRoFormer** — audio source separation
 - **WanEx_HuMoImageToVideo** — human motion conditioning
-- **ImageBatchChangeFPS** — downsamples 50 FPS generation to 25 FPS required by HuMo
+- **VHS_SelectEveryNthImage** — downsamples 50 FPS generation to 25 FPS required by HuMo
 
 The **HuMo Long Edge** input controls the resolution fed to the HuMo model. Recommended values: `1280`, `1536`, `1920`, `2560`.
 
@@ -74,10 +74,10 @@ The **HuMo Long Edge** input controls the resolution fed to the HuMo model. Reco
 | Node Pack | Nodes Used | Repo |
 |-----------|-----------|------|
 | **ComfyUI-LTXVideo** | All `LTXV*` / `LTX2*` nodes | https://github.com/Lightricks/ComfyUI-LTXVideo |
-| **ComfyUI-KJNodes** | `VAELoaderKJ`, `DiffusionModelLoaderKJ`, `ManualSigmas`, `GuiderParameters`, `GetImageSize`, `GetImageSizeAndCount`, `GetImageRangeFromBatch`, `VRAM_Debug` | https://github.com/kijai/ComfyUI-KJNodes |
+| **ComfyUI-KJNodes** | `VAELoaderKJ`, `DiffusionModelLoaderKJ`, `ManualSigmas`, `GuiderParameters`, `GetImageSize`, `GetImageSizeAndCount`, `GetImageRangeFromBatch`, `VRAM_Debug`, `LoadAndResizeImage`, `LazySwitchKJ` | https://github.com/kijai/ComfyUI-KJNodes |
 | **RES4LYF** | `ClownSampler_Beta`, `ClownsharKSampler_Beta`, `ClownOptions_ExtraOptions_Beta`, `Sigmas Resample`, `Sigmas Rescale`, `Sigmas Split Value`, `Linear Quadratic Advanced`, `FloatConstant` | https://github.com/ClownsharkBatwing/RES4LYF |
 | **ComfyUI_essentials** | `SimpleMath+`, `ImageFromBatch` | https://github.com/cubiq/ComfyUI_essentials |
-| **ComfyUI-VideoHelperSuite** | `VHS_LoadAudioUpload`, `VHS_LoadVideo`, `VHS_VideoInfoSource` | https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite |
+| **ComfyUI-VideoHelperSuite** | `VHS_LoadAudioUpload`, `VHS_LoadVideo`, `VHS_VideoInfoSource`, `VHS_SelectEveryNthImage` | https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite |
 | **ComfyUI-WanVideoWrapper** | `NormalizeAudioLoudness` | https://github.com/kijai/ComfyUI-WanVideoWrapper |
 | **comfyui-various** | `JWImageResizeByLongerSide` | https://github.com/jamesWalker55/comfyui-various |
 | **Nvidia RTX Nodes** | `RTXVideoSuperResolution` | https://github.com/Comfy-Org/Nvidia_RTX_Nodes_ComfyUI |
@@ -97,9 +97,8 @@ The **HuMo Long Edge** input controls the resolution fed to the HuMo model. Reco
 |-----------|-----------|------|
 | **WanExperiments** | `WanEx_HuMoImageToVideo`, `WanEx_ContextWindowsAdvanced` | https://github.com/drozbay/WanExperiments |
 | **ComfyUI-MelBandRoFormer** | `MelBandRoFormerModelLoader`, `MelBandRoFormerSampler` | https://github.com/kijai/ComfyUI-MelBandRoFormer |
-| **ComfyUI-FPSChange** | `ImageBatchChangeFPS` | https://github.com/ckinpdx/ComfyUI-FPSChange |
 
-> The FPS node is required because these workflows generate at 50 FPS for quality, but HuMo's motion module expects 25 FPS input.
+> `VHS_SelectEveryNthImage` (VideoHelperSuite) is used to downsample 50 FPS generation to 25 FPS required by HuMo.
 
 ## Required Models
 
@@ -114,6 +113,8 @@ The **HuMo Long Edge** input controls the resolution fed to the HuMo model. Reco
 | `LTX23_audio_vae_bf16.safetensors` | LTX 2.3 audio VAE |
 | `ltx-2.3-spatial-upscaler-x2-1.1.safetensors` | LTX 2.3 spatial upscaler (2x) |
 | `ltx-2.3-22b-distilled-lora-384.safetensors` | LTX 2.3 distilled LoRA (loaded twice at different weights for each generation stage) |
+| `LTX2.3_Reasoning_V1.safetensors` | Reasoning LoRA (`TorI2V` workflow) |
+| `ltx-2.3-id-lora-celebvhq-3k.safetensors` | Identity LoRA for character/face consistency (`IDLora` workflows) |
 
 ### HuMo workflows (additional)
 
