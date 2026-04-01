@@ -9,7 +9,7 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 ## Naming Convention
 
 ```
-[HQ_] LTX23 [_A-] [TorI2V | _Continuation] [_IDLora] [_HuMo] _API
+[HQ_] LTX23 [_A-] [TorI2V | _FLF-I2V | _FLF-AI2V | _Continuation] [_IDLora] [_HuMo] _API
 ```
 
 | Segment | Meaning |
@@ -18,9 +18,12 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 | `LTX23` | LTX Video 2.3 |
 | `A-` | Audio input |
 | `TorI2V` | T2V or I2V — mode toggled via boolean input (`T2V True` / `I2V False`) |
+| `FLF` | First and Last Frame — conditions generation on both a start and end frame |
+| `I2V` | Image to Video (start frame) |
+| `AI2V` | Audio + Image to Video |
 | `_Continuation` | True video continuation — loads an existing video and generates new frames from a specified start point forward |
-| `IDLora` | Identity LoRA — character/face consistency via reference image |
-| `HuMo` | Includes human motion module (see dependencies) |
+| `_IDLora` | Identity LoRA — character/face consistency via reference image |
+| `_HuMo` | Includes human motion module (see dependencies) |
 | `_API` | Structured for API export (no Get/Set nodes or subgraphs) |
 
 ## Workflows
@@ -32,6 +35,10 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 | `LTX23_A-TorI2V_Humo_API.json` | T2V or I2V toggle with audio + HuMo human motion. |
 | `LTX23_TorI2V_IDLora_API.json` | T2V or I2V toggle with identity LoRA and reference audio. |
 | `LTX23_TorI2V_IDLora_HuMo_API.json` | T2V or I2V toggle with identity LoRA + HuMo human motion. |
+| `LTX23_FLF-I2V_API.json` | First and last frame I2V — generates content between a start and end frame. |
+| `LTX23_FLF-I2V_HuMo_API.json` | First and last frame I2V with HuMo human motion. |
+| `LTX23_FLF-AI2V_API.json` | First and last frame I2V with audio. |
+| `LTX23_FLF-AI2V_HuMo_API.json` | First and last frame I2V with audio + HuMo human motion. |
 | `HQ_LTX23AI2V_HuMoAPI.json` | High quality audio + image-to-video with HuMo. |
 | `LTX23_Continuation_API.json` | True video continuation — loads a video and generates new frames from a specified start point. |
 | `LTX23_Continuation_HuMo_API.json` | Video continuation with HuMo human motion. |
@@ -58,6 +65,8 @@ All workflows share:
 
 `TorI2V` workflows use a **boolean toggle** (`T2V True` / `I2V False`) to switch between text-to-video and image-to-video mode in a single workflow.
 
+`FLF` workflows condition on **both a start and end frame**, with the model generating the content in between.
+
 HuMo workflows additionally include:
 - **MelBandRoFormer** — audio source separation
 - **WanEx_HuMoImageToVideo** — human motion conditioning
@@ -74,7 +83,7 @@ The **HuMo Long Edge** input controls the resolution fed to the HuMo model. Reco
 | Node Pack | Nodes Used | Repo |
 |-----------|-----------|------|
 | **ComfyUI-LTXVideo** | All `LTXV*` / `LTX2*` nodes | https://github.com/Lightricks/ComfyUI-LTXVideo |
-| **ComfyUI-KJNodes** | `VAELoaderKJ`, `DiffusionModelLoaderKJ`, `ManualSigmas`, `GuiderParameters`, `GetImageSize`, `GetImageSizeAndCount`, `GetImageRangeFromBatch`, `VRAM_Debug`, `LoadAndResizeImage`, `LazySwitchKJ` | https://github.com/kijai/ComfyUI-KJNodes |
+| **ComfyUI-KJNodes** | `VAELoaderKJ`, `DiffusionModelLoaderKJ`, `ManualSigmas`, `GuiderParameters`, `GetImageSize`, `GetImageSizeAndCount`, `VRAM_Debug`, `LoadAndResizeImage`, `LazySwitchKJ`, `LTXVImgToVideoInplaceKJ`, `BatchImagesNode` | https://github.com/kijai/ComfyUI-KJNodes |
 | **RES4LYF** | `ClownSampler_Beta`, `ClownsharKSampler_Beta`, `ClownOptions_ExtraOptions_Beta`, `Sigmas Resample`, `Sigmas Rescale`, `Sigmas Split Value`, `Linear Quadratic Advanced`, `FloatConstant` | https://github.com/ClownsharkBatwing/RES4LYF |
 | **ComfyUI_essentials** | `SimpleMath+`, `ImageFromBatch` | https://github.com/cubiq/ComfyUI_essentials |
 | **ComfyUI-VideoHelperSuite** | `VHS_LoadAudioUpload`, `VHS_LoadVideo`, `VHS_VideoInfoSource`, `VHS_SelectEveryNthImage` | https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite |
