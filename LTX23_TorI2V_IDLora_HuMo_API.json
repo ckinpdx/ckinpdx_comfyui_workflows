@@ -4419,67 +4419,15 @@
       "bgcolor": "#353"
     },
     {
-      "id": 1382,
-      "type": "CreateVideo",
-      "pos": [
-        2790,
-        4800
-      ],
-      "size": [
-        270,
-        80
-      ],
-      "flags": {},
-      "order": 87,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 2810
-        },
-        {
-          "name": "audio",
-          "shape": 7,
-          "type": "AUDIO",
-          "link": 2953
-        }
-      ],
-      "outputs": [
-        {
-          "name": "VIDEO",
-          "type": "VIDEO",
-          "links": [
-            2777
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.15.1",
-        "Node name for S&R": "CreateVideo",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        50
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 1474,
       "type": "NormalizeAudioLoudness",
       "pos": [
-        2786.1128032087095,
-        4918.776975199928
+        2790,
+        4920
       ],
       "size": [
-        277.46666564941404,
-        58
+        280,
+        60
       ],
       "flags": {},
       "order": 67,
@@ -4501,13 +4449,14 @@
         }
       ],
       "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {}
-        },
         "cnr_id": "ComfyUI-WanVideoWrapper",
         "ver": "df8f3e49daaad117cf3090cc916c83f3d001494c",
-        "Node name for S&R": "NormalizeAudioLoudness"
+        "Node name for S&R": "NormalizeAudioLoudness",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
       },
       "widgets_values": [
         -23
@@ -4713,12 +4662,12 @@
       "id": 1475,
       "type": "LTXVCropGuides",
       "pos": [
-        72.99355714870023,
-        5080.8889249396125
+        70,
+        5080
       ],
       "size": [
-        152.70000305175782,
-        66
+        160,
+        70
       ],
       "flags": {},
       "order": 61,
@@ -4764,13 +4713,14 @@
         }
       ],
       "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {}
-        },
         "cnr_id": "comfy-core",
         "ver": "0.18.1",
-        "Node name for S&R": "LTXVCropGuides"
+        "Node name for S&R": "LTXVCropGuides",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
       },
       "widgets_values": [],
       "color": "#432",
@@ -4871,8 +4821,8 @@
         5050
       ],
       "size": [
-        152.70000305175782,
-        66
+        160,
+        70
       ],
       "flags": {},
       "order": 73,
@@ -4914,13 +4864,14 @@
         }
       ],
       "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {}
-        },
         "cnr_id": "comfy-core",
         "ver": "0.18.1",
-        "Node name for S&R": "LTXVCropGuides"
+        "Node name for S&R": "LTXVCropGuides",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
       },
       "widgets_values": [],
       "color": "#432",
@@ -4972,6 +4923,58 @@
         }
       },
       "widgets_values": [],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 1382,
+      "type": "CreateVideo",
+      "pos": [
+        2790,
+        4800
+      ],
+      "size": [
+        270,
+        80
+      ],
+      "flags": {},
+      "order": 87,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 2810
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 2953
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            2777
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.15.1",
+        "Node name for S&R": "CreateVideo",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        25
+      ],
       "color": "#432",
       "bgcolor": "#653"
     }
@@ -6398,10 +6401,10 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 0.3452271214393152,
+      "scale": 0.3797498335832469,
       "offset": [
-        1327.832968542795,
-        -3779.735427514377
+        614.275343999099,
+        -3860.029366914866
       ]
     }
   },

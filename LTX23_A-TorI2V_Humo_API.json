@@ -1,8 +1,8 @@
 {
   "id": "aee77268-2492-4600-be5c-0f2958853897",
   "revision": 0,
-  "last_node_id": 1447,
-  "last_link_id": 2884,
+  "last_node_id": 1448,
+  "last_link_id": 2887,
   "nodes": [
     {
       "id": 1331,
@@ -3661,54 +3661,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 1435,
-      "type": "ImageFromBatch",
-      "pos": [
-        800,
-        5580
-      ],
-      "size": [
-        210,
-        90
-      ],
-      "flags": {},
-      "order": 77,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 2864
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            2857,
-            2865
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.18.1",
-        "Node name for S&R": "ImageFromBatch",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        0,
-        1
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 1439,
       "type": "AudioEncoderLoader",
       "pos": [
@@ -4229,49 +4181,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 1414,
-      "type": "PrimitiveBoolean",
-      "pos": [
-        -1310,
-        6140
-      ],
-      "size": [
-        270,
-        60
-      ],
-      "flags": {},
-      "order": 23,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "BOOLEAN",
-          "type": "BOOLEAN",
-          "links": [
-            2826,
-            2827,
-            2871
-          ]
-        }
-      ],
-      "title": "I2V False, T2V True",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.18.1",
-        "Node name for S&R": "PrimitiveBoolean",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        true
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 1431,
       "type": "VRAM_Debug",
       "pos": [
@@ -4369,7 +4278,7 @@
         180
       ],
       "flags": {},
-      "order": 24,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -4640,112 +4549,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 1436,
-      "type": "LazySwitchKJ",
-      "pos": [
-        800,
-        5710
-      ],
-      "size": [
-        210,
-        80
-      ],
-      "flags": {},
-      "order": 80,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "on_false",
-          "type": "*",
-          "link": 2880
-        },
-        {
-          "name": "on_true",
-          "type": "*",
-          "link": 2865
-        },
-        {
-          "name": "switch",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "switch"
-          },
-          "link": 2871
-        }
-      ],
-      "outputs": [
-        {
-          "name": "*",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "8ba02bd7bb133f4125fd6260faaff742d8ba6142",
-        "Node name for S&R": "LazySwitchKJ",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        false
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 1359,
-      "type": "LoadImage",
-      "pos": [
-        -1310,
-        5030
-      ],
-      "size": [
-        290,
-        320
-      ],
-      "flags": {},
-      "order": 25,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            2694,
-            2695,
-            2880
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "title": "FADE: Start Frame",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.15.1",
-        "Node name for S&R": "LoadImage",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "scene_1.png",
-        "image"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 1333,
       "type": "LTXVConditioning",
       "pos": [
@@ -4872,12 +4675,12 @@
       "id": 1447,
       "type": "LTXVCropGuides",
       "pos": [
-        568.5482830479212,
-        5059.75939233966
+        570,
+        5060
       ],
       "size": [
-        152.70000305175782,
-        66
+        160,
+        70
       ],
       "flags": {},
       "order": 73,
@@ -4919,14 +4722,213 @@
         }
       ],
       "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {}
-        },
         "cnr_id": "comfy-core",
         "ver": "0.18.1",
-        "Node name for S&R": "LTXVCropGuides"
+        "Node name for S&R": "LTXVCropGuides",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
       },
+      "widgets_values": [],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 1414,
+      "type": "PrimitiveBoolean",
+      "pos": [
+        -1310,
+        6140
+      ],
+      "size": [
+        270,
+        60
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "BOOLEAN",
+          "type": "BOOLEAN",
+          "links": [
+            2826,
+            2827,
+            2885
+          ]
+        }
+      ],
+      "title": "I2V False, T2V True",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.1",
+        "Node name for S&R": "PrimitiveBoolean",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        true
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 1435,
+      "type": "ImageFromBatch",
+      "pos": [
+        800,
+        5580
+      ],
+      "size": [
+        210,
+        90
+      ],
+      "flags": {},
+      "order": 77,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 2864
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            2857,
+            2886
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.1",
+        "Node name for S&R": "ImageFromBatch",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        0,
+        1
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 1359,
+      "type": "LoadImage",
+      "pos": [
+        -1310,
+        5030
+      ],
+      "size": [
+        290,
+        320
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            2694,
+            2695,
+            2887
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "FADE: Start Frame",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.15.1",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "scene_1.png",
+        "image"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 1448,
+      "type": "LazySwitchKJ",
+      "pos": [
+        800,
+        5710
+      ],
+      "size": [
+        210,
+        80
+      ],
+      "flags": {},
+      "order": 80,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "on_false",
+          "type": "*",
+          "link": 2887
+        },
+        {
+          "name": "on_true",
+          "type": "*",
+          "link": 2886
+        },
+        {
+          "name": "switch",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "switch"
+          },
+          "link": 2885
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "8ba02bd7bb133f4125fd6260faaff742d8ba6142",
+        "Node name for S&R": "LazySwitchKJ",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        false
+      ],
       "color": "#432",
       "bgcolor": "#653"
     }
@@ -5765,14 +5767,6 @@
       "IMAGE"
     ],
     [
-      2865,
-      1435,
-      0,
-      1436,
-      1,
-      "IMAGE"
-    ],
-    [
       2866,
       1438,
       0,
@@ -5811,14 +5805,6 @@
       1406,
       0,
       "IMAGE"
-    ],
-    [
-      2871,
-      1414,
-      0,
-      1436,
-      2,
-      "BOOLEAN"
     ],
     [
       2872,
@@ -5885,14 +5871,6 @@
       "CONDITIONING"
     ],
     [
-      2880,
-      1359,
-      0,
-      1436,
-      0,
-      "IMAGE"
-    ],
-    [
       2881,
       1333,
       0,
@@ -5923,6 +5901,30 @@
       1395,
       0,
       "LATENT"
+    ],
+    [
+      2885,
+      1414,
+      0,
+      1448,
+      2,
+      "BOOLEAN"
+    ],
+    [
+      2886,
+      1435,
+      0,
+      1448,
+      1,
+      "IMAGE"
+    ],
+    [
+      2887,
+      1359,
+      0,
+      1448,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [],
@@ -6329,10 +6331,10 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 0.6115909044841686,
+      "scale": 0.5559917313492444,
       "offset": [
-        960.7501853429388,
-        -4598.47733765838
+        1399.577243508295,
+        -4590.672089496792
       ]
     }
   },
