@@ -113,7 +113,7 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 | Node Pack | Nodes Used | Repo |
 |-----------|-----------|------|
 | **ComfyUI-LTXVideo** | All `LTXV*` / `LTX2*` nodes | https://github.com/Lightricks/ComfyUI-LTXVideo |
-| **ComfyUI-KJNodes** | `VAELoaderKJ`, `DiffusionModelLoaderKJ`, `ManualSigmas`, `GuiderParameters`, `GetImageSize`, `GetImageSizeAndCount`, `VRAM_Debug`, `LoadAndResizeImage`, `LazySwitchKJ`, `LTXVImgToVideoInplaceKJ`, `BatchImagesNode` | https://github.com/kijai/ComfyUI-KJNodes |
+| **ComfyUI-KJNodes** | `VAELoaderKJ`, `DiffusionModelLoaderKJ`, `ManualSigmas`, `GuiderParameters`, `GetImageSize`, `GetImageSizeAndCount`, `VRAM_Debug`, `LoadAndResizeImage`, `LazySwitchKJ`, `LTXVImgToVideoInplaceKJ`, `BatchImagesNode`, `ColorMatchV2` | https://github.com/kijai/ComfyUI-KJNodes |
 | **RES4LYF** | `ClownSampler_Beta`, `ClownsharKSampler_Beta`, `ClownOptions_ExtraOptions_Beta`, `Sigmas Resample`, `Sigmas Rescale`, `Sigmas Split Value`, `Linear Quadratic Advanced`, `FloatConstant` | https://github.com/ClownsharkBatwing/RES4LYF |
 | **ComfyUI_essentials** | `SimpleMath+`, `ImageFromBatch` | https://github.com/cubiq/ComfyUI_essentials |
 | **ComfyUI-VideoHelperSuite** | `VHS_LoadAudioUpload`, `VHS_LoadVideo`, `VHS_VideoInfoSource`, `VHS_SelectEveryNthImage`, `VHS_VideoCombine` | https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite |
@@ -138,6 +138,12 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 | **ComfyUI-MelBandRoFormer** | `MelBandRoFormerModelLoader`, `MelBandRoFormerSampler` | https://github.com/kijai/ComfyUI-MelBandRoFormer |
 
 > `VHS_SelectEveryNthImage` (VideoHelperSuite) is used to downsample 50 FPS generation to 25 FPS required by HuMo.
+
+### WAN22 workflows (additional)
+
+| Node Pack | Nodes Used | Repo |
+|-----------|-----------|------|
+| **ComfyUI-LTXDimensionCalculator** | `LTXDimensionCalculator`, `LTXFrameCalculator` | https://github.com/ckinpdx/ComfyUI-LTXDimensionCalculator |
 
 ## Required Models
 
