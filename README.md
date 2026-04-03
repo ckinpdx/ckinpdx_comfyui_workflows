@@ -68,7 +68,8 @@ LTX 2.3 + Wan 2.2 low-noise refinement. A simpler alternative to HuMo — no aud
 | `LTX23_FLF-I2V_WAN22_API.json` | First and last frame I2V with Wan 2.2 refinement. |
 | `LTX23_FLF-AI2V_WAN22_API.json` | First and last frame I2V with audio + Wan 2.2 refinement. |
 | `LTX23_Continuation_WAN22_API.json` | Video continuation with Wan 2.2 refinement. |
-| `1Stage_LTX23AI2V_WAN22_API.json` | Single-stage audio + image-to-video with Wan 2.2 refinement. |
+| `1Stage_LTX23_TorI2V_WAN22_API.json` | Single-stage T2V or I2V toggle with Wan 2.2 refinement. |
+| `1Stage_LTX23_A-TorI2V_WAN22_API.json` | Single-stage T2V or I2V toggle with audio + Wan 2.2 refinement. |
 
 ## Node Color Coding
 
@@ -113,12 +114,11 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 | Node Pack | Nodes Used | Repo |
 |-----------|-----------|------|
 | **ComfyUI-LTXVideo** | All `LTXV*` / `LTX2*` nodes | https://github.com/Lightricks/ComfyUI-LTXVideo |
-| **ComfyUI-KJNodes** | `VAELoaderKJ`, `DiffusionModelLoaderKJ`, `ManualSigmas`, `GuiderParameters`, `GetImageSize`, `GetImageSizeAndCount`, `VRAM_Debug`, `LoadAndResizeImage`, `LazySwitchKJ`, `LTXVImgToVideoInplaceKJ`, `BatchImagesNode`, `ColorMatchV2` | https://github.com/kijai/ComfyUI-KJNodes |
+| **ComfyUI-KJNodes** | `VAELoaderKJ`, `DiffusionModelLoaderKJ`, `ManualSigmas`, `GuiderParameters`, `GetImageSize`, `GetImageSizeAndCount`, `VRAM_Debug`, `LoadAndResizeImage`, `LazySwitchKJ`, `LTXVImgToVideoInplaceKJ`, `BatchImagesNode` | https://github.com/kijai/ComfyUI-KJNodes |
 | **RES4LYF** | `ClownSampler_Beta`, `ClownsharKSampler_Beta`, `ClownOptions_ExtraOptions_Beta`, `Sigmas Resample`, `Sigmas Rescale`, `Sigmas Split Value`, `Linear Quadratic Advanced`, `FloatConstant` | https://github.com/ClownsharkBatwing/RES4LYF |
 | **ComfyUI_essentials** | `SimpleMath+`, `ImageFromBatch` | https://github.com/cubiq/ComfyUI_essentials |
 | **ComfyUI-VideoHelperSuite** | `VHS_LoadAudioUpload`, `VHS_LoadVideo`, `VHS_VideoInfoSource`, `VHS_SelectEveryNthImage`, `VHS_VideoCombine` | https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite |
 | **ComfyUI-WanVideoWrapper** | `NormalizeAudioLoudness` | https://github.com/kijai/ComfyUI-WanVideoWrapper |
-| **comfyui-various** | `JWImageResizeByLongerSide` | https://github.com/jamesWalker55/comfyui-various |
 | **Nvidia RTX Nodes** | `RTXVideoSuperResolution` | https://github.com/Comfy-Org/Nvidia_RTX_Nodes_ComfyUI |
 
 > **NormalizeAudioLoudness bug:** If the audio input is very short or near-silence, the BS.1770 loudness measurement returns NaN/inf, producing a poisoned tensor that silently passes through and crashes the video save node with `[Errno 22]` during AAC encoding. Fix in `ComfyUI-WanVideoWrapper/nodes_utility.py`:
@@ -136,6 +136,7 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 |-----------|-----------|------|
 | **WanExperiments** | `WanEx_HuMoImageToVideo`, `WanEx_ContextWindowsAdvanced` | https://github.com/drozbay/WanExperiments |
 | **ComfyUI-MelBandRoFormer** | `MelBandRoFormerModelLoader`, `MelBandRoFormerSampler` | https://github.com/kijai/ComfyUI-MelBandRoFormer |
+| **comfyui-various** | `JWImageResizeByLongerSide` | https://github.com/jamesWalker55/comfyui-various |
 
 > `VHS_SelectEveryNthImage` (VideoHelperSuite) is used to downsample 50 FPS generation to 25 FPS required by HuMo.
 
@@ -144,6 +145,7 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 | Node Pack | Nodes Used | Repo |
 |-----------|-----------|------|
 | **ComfyUI-LTXDimensionCalculator** | `LTXDimensionCalculator`, `LTXFrameCalculator` | https://github.com/ckinpdx/ComfyUI-LTXDimensionCalculator |
+| **ComfyUI-KJNodes** | `ColorMatchV2` (additional node — pack already required above) | https://github.com/kijai/ComfyUI-KJNodes |
 
 ## Required Models
 
