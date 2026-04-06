@@ -1,8 +1,8 @@
 {
   "id": "880d0ec7-5f21-4ca4-b64a-17ddee50641e",
   "revision": 0,
-  "last_node_id": 433,
-  "last_link_id": 1083,
+  "last_node_id": 434,
+  "last_link_id": 1086,
   "nodes": [
     {
       "id": 300,
@@ -1613,138 +1613,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 424,
-      "type": "SimpleMath+",
-      "pos": [
-        -1600,
-        6210
-      ],
-      "size": [
-        270,
-        100
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 30,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "shape": 7,
-          "type": "*",
-          "link": 1047
-        },
-        {
-          "name": "b",
-          "shape": 7,
-          "type": "*",
-          "link": 1048
-        },
-        {
-          "name": "c",
-          "shape": 7,
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            1049
-          ]
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_essentials",
-        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
-        "Node name for S&R": "SimpleMath+",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "a*b"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 425,
-      "type": "SimpleMath+",
-      "pos": [
-        -1600,
-        6250
-      ],
-      "size": [
-        270,
-        100
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 35,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "shape": 7,
-          "type": "*",
-          "link": 1049
-        },
-        {
-          "name": "b",
-          "shape": 7,
-          "type": "*",
-          "link": 1050
-        },
-        {
-          "name": "c",
-          "shape": 7,
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            1052
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_essentials",
-        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
-        "Node name for S&R": "SimpleMath+",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "(a + b - ((a - b) * (a - b)) ** 0.5) / 2"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 427,
       "type": "SimpleMath+",
       "pos": [
@@ -1807,73 +1675,6 @@
       },
       "widgets_values": [
         "a/b"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 412,
-      "type": "SimpleMath+",
-      "pos": [
-        -1600,
-        6330
-      ],
-      "size": [
-        270,
-        100
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 25,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "shape": 7,
-          "type": "*",
-          "link": 990
-        },
-        {
-          "name": "b",
-          "shape": 7,
-          "type": "*",
-          "link": 1082
-        },
-        {
-          "name": "c",
-          "shape": 7,
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            1004,
-            1045
-          ]
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_essentials",
-        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
-        "Node name for S&R": "SimpleMath+",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "(a + b - ((a - b) * (a - b)) ** 0.5) / 2"
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -2371,144 +2172,6 @@
       },
       "widgets_values": [
         "25"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 411,
-      "type": "SimpleMath+",
-      "pos": [
-        -1600,
-        6170
-      ],
-      "size": [
-        270,
-        100
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "shape": 7,
-          "type": "*",
-          "link": 983
-        },
-        {
-          "name": "b",
-          "shape": 7,
-          "type": "*",
-          "link": 988
-        },
-        {
-          "name": "c",
-          "shape": 7,
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            985,
-            1003,
-            1019,
-            1048,
-            1053,
-            1060
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_essentials",
-        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
-        "Node name for S&R": "SimpleMath+",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "(a + b - ((a - b) * (a - b)) ** 0.5) / 2"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 413,
-      "type": "SimpleMath+",
-      "pos": [
-        -1600,
-        6370
-      ],
-      "size": [
-        270,
-        100
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 26,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "shape": 7,
-          "type": "*",
-          "link": 991
-        },
-        {
-          "name": "b",
-          "shape": 7,
-          "type": "*",
-          "link": 1083
-        },
-        {
-          "name": "c",
-          "shape": 7,
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            1005,
-            1046
-          ]
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui_essentials",
-        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
-        "Node name for S&R": "SimpleMath+",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "(a + b - ((a - b) * (a - b)) ** 0.5) / 2"
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -3197,69 +2860,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 433,
-      "type": "LTXDimensionCalculator",
-      "pos": [
-        -2130,
-        5440
-      ],
-      "size": [
-        270,
-        186
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "width",
-          "type": "INT",
-          "links": [
-            1082
-          ]
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "links": [
-            1083
-          ]
-        },
-        {
-          "name": "width_half",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "name": "height_half",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "name": "label",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {}
-        },
-        "aux_id": "ckinpdx/ComfyUI-LTXDimensionCalculator",
-        "ver": "6f5f6a6fd033bda8e3c7e94c5dbf0a56973539c1",
-        "Node name for S&R": "LTXDimensionCalculator"
-      },
-      "widgets_values": [
-        "9:16 — TikTok, Reels, Shorts",
-        "Portrait",
-        "640x1152"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 373,
       "type": "PrimitiveInt",
       "pos": [
@@ -3271,7 +2871,7 @@
         90
       ],
       "flags": {},
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3296,7 +2896,7 @@
         }
       },
       "widgets_values": [
-        10,
+        11,
         "increment"
       ],
       "color": "#232",
@@ -3314,7 +2914,7 @@
         200
       ],
       "flags": {},
-      "order": 15,
+      "order": 14,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3339,6 +2939,407 @@
       },
       "widgets_values": [
         ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 425,
+      "type": "SimpleMath+",
+      "pos": [
+        -1600,
+        6250
+      ],
+      "size": [
+        270,
+        100
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "*",
+          "link": 1049
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "*",
+          "link": 1050
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            1052
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "SimpleMath+",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "(a + b - ((a - b) * (a - b)) ** 0.5) / 2"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 424,
+      "type": "SimpleMath+",
+      "pos": [
+        -1600,
+        6210
+      ],
+      "size": [
+        270,
+        100
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "*",
+          "link": 1047
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "*",
+          "link": 1048
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            1049
+          ]
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "SimpleMath+",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "a*b"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 411,
+      "type": "SimpleMath+",
+      "pos": [
+        -1600,
+        6170
+      ],
+      "size": [
+        270,
+        100
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "*",
+          "link": 983
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "*",
+          "link": 988
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            985,
+            1003,
+            1019,
+            1048,
+            1053,
+            1060
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "SimpleMath+",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "(a + b - ((a - b) * (a - b)) ** 0.5) / 2"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 433,
+      "type": "LTXDimensionCalculator",
+      "pos": [
+        -2130,
+        5440
+      ],
+      "size": [
+        270,
+        190
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "width_half",
+          "type": "INT",
+          "links": [
+            1085
+          ]
+        },
+        {
+          "name": "height_half",
+          "type": "INT",
+          "links": [
+            1086
+          ]
+        },
+        {
+          "name": "label",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ckinpdx/ComfyUI-LTXDimensionCalculator",
+        "ver": "6f5f6a6fd033bda8e3c7e94c5dbf0a56973539c1",
+        "Node name for S&R": "LTXDimensionCalculator",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "9:16 — TikTok, Reels, Shorts",
+        "Portrait",
+        "1088x1920"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 412,
+      "type": "SimpleMath+",
+      "pos": [
+        -1600,
+        6330
+      ],
+      "size": [
+        270,
+        100
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "*",
+          "link": 990
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "*",
+          "link": 1085
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            1004,
+            1045
+          ]
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "SimpleMath+",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "(a + b - ((a - b) * (a - b)) ** 0.5) / 2"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 413,
+      "type": "SimpleMath+",
+      "pos": [
+        -1600,
+        6370
+      ],
+      "size": [
+        270,
+        100
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "*",
+          "link": 991
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "*",
+          "link": 1086
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            1005,
+            1046
+          ]
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "SimpleMath+",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "(a + b - ((a - b) * (a - b)) ** 0.5) / 2"
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -4010,17 +4011,17 @@
       "MODEL"
     ],
     [
-      1082,
+      1085,
       433,
-      0,
+      2,
       412,
       1,
       "INT"
     ],
     [
-      1083,
+      1086,
       433,
-      1,
+      3,
       413,
       1,
       "INT"
@@ -4030,10 +4031,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5857309096719053,
+      "scale": 0.5324826451562775,
       "offset": [
-        2656.8488803543037,
-        -4585.4733956834525
+        2914.568709806556,
+        -4842.196738872634
       ]
     },
     "frontendVersion": "1.42.8",
