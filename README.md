@@ -105,7 +105,7 @@ The **HuMo Long Edge** input controls the resolution fed to the HuMo model. Reco
 
 **Choosing compatible dimensions is non-trivial.** LTX, HuMo, and the rescale step each impose constraints, and the interaction between them — particularly across different workflow types — means a combination that works in one workflow may fail in another. Expect to test combinations rather than derive them from first principles. Known working baseline: LTX `2560×1440`, HuMo long edge `1920`.
 
-WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no MelBandRoFormer, no Whisper, no HuMo model. The `WAN 2.2 LN Steps` input controls the number of refinement steps.
+WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no MelBandRoFormer, no Whisper, no HuMo model. 
 
 ## Dependencies
 
