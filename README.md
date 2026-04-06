@@ -9,7 +9,7 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 ## Naming Convention
 
 ```
-[1Stage_] LTX23 [_A-] [TorI2V | _FLF-I2V | _FLF-AI2V | _Continuation] [_IDLora] [_HuMo | _WAN22] _API
+[1Stage_] LTX23 [_A-] [TorI2V | _FLF-I2V | _FLF-A-I2V | _Continuation] [_IDLora] [_HuMo | _WAN22] _API
 ```
 
 | Segment | Meaning |
@@ -20,7 +20,7 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 | `TorI2V` | T2V or I2V — mode toggled via boolean input (`T2V True` / `I2V False`) |
 | `FLF` | First and Last Frame — conditions generation on both a start and end frame |
 | `I2V` | Image to Video (start frame) |
-| `AI2V` | Audio + Image to Video |
+| `A-I2V` | Audio + Image to Video |
 | `_Continuation` | True video continuation — loads an existing video and generates new frames from a specified start point forward |
 | `_IDLora` | Identity LoRA — character/face consistency via reference image |
 | `_HuMo` | Includes human motion module (see dependencies) |
@@ -39,7 +39,7 @@ Base workflows — LTX 2.3 only, no motion refinement.
 | `LTX23_A-TorI2V_API.json` | T2V or I2V toggle with audio input. |
 | `LTX23_TorI2V_IDLora_API.json` | T2V or I2V toggle with identity LoRA. |
 | `LTX23_FLF-I2V_API.json` | First and last frame I2V — generates content between a start and end frame. |
-| `LTX23_FLF-AI2V_API.json` | First and last frame I2V with audio. |
+| `LTX23_FLF-A-I2V_API.json` | First and last frame A-I2V with audio. |
 | `LTX23_Continuation_API.json` | True video continuation — loads a video and generates new frames from a specified start point. |
 
 ### LTX23_HuMo/
@@ -52,8 +52,8 @@ LTX 2.3 + HuMo human motion conditioning. Requires additional models (see below)
 | `LTX23_A-TorI2V_Humo_API.json` | T2V or I2V toggle with audio + HuMo human motion. |
 | `LTX23_TorI2V_IDLora_HuMo_API.json` | T2V or I2V toggle with identity LoRA + HuMo human motion. |
 | `LTX23_FLF-I2V_HuMo_API.json` | First and last frame I2V with HuMo human motion. |
-| `LTX23_FLF-AI2V_HuMo_API.json` | First and last frame I2V with audio + HuMo human motion. |
-| `1Stage_LTX23AI2V_HuMoAPI.json` | Single-stage audio + image-to-video with HuMo. |
+| `LTX23_FLF-A-I2V_HuMo_API.json` | First and last frame A-I2V with HuMo human motion. |
+| `1Stage_LTX23_A-I2V_HuMo_API.json` | Single-stage audio + image-to-video with HuMo. |
 | `LTX23_Continuation_HuMo_API.json` | Video continuation with HuMo human motion. |
 
 ### LTX23_WAN22/
@@ -66,7 +66,7 @@ LTX 2.3 + Wan 2.2 low-noise refinement. A simpler alternative to HuMo — no aud
 | `LTX23_TorI2V_IDLora_WAN22_API.json` | T2V or I2V toggle with identity LoRA + Wan 2.2 refinement. |
 | `LTX23_A-TorI2V_WAN22_API.json` | T2V or I2V toggle with audio + Wan 2.2 refinement. |
 | `LTX23_FLF-I2V_WAN22_API.json` | First and last frame I2V with Wan 2.2 refinement. |
-| `LTX23_FLF-AI2V_WAN22_API.json` | First and last frame I2V with audio + Wan 2.2 refinement. |
+| `LTX23_FLF-A-I2V_WAN22_API.json` | First and last frame A-I2V with Wan 2.2 refinement. |
 | `LTX23_Continuation_WAN22_API.json` | Video continuation with Wan 2.2 refinement. |
 | `1Stage_LTX23_TorI2V_WAN22_API.json` | Single-stage T2V or I2V toggle with Wan 2.2 refinement. |
 | `1Stage_LTX23_A-TorI2V_WAN22_API.json` | Single-stage T2V or I2V toggle with audio + Wan 2.2 refinement. |
@@ -88,6 +88,7 @@ All workflows share:
 - **RTX Video Super Resolution** — final output upscale (requires RTX GPU)
 - **LTXVChunkFeedForward** — chunked processing for longer clips
 - **ClownSampler / ClownsharKSampler** — advanced sampling
+- **LTXDimensionCalculator / LTXFrameCalculator** — dimension and frame count validation
 - **FADE-labeled primitives** — exposed inputs for use with the FADE API layer
 
 Most workflows use a **two-stage generation** pipeline — low-res draft pass → latent upsample → full-res refinement. `1Stage_` workflows skip the first stage.
@@ -105,7 +106,7 @@ The **HuMo Long Edge** input controls the resolution fed to the HuMo model. Reco
 
 **Choosing compatible dimensions is non-trivial.** LTX, HuMo, and the rescale step each impose constraints, and the interaction between them — particularly across different workflow types — means a combination that works in one workflow may fail in another. Expect to test combinations rather than derive them from first principles. Known working baseline: LTX `2560×1440`, HuMo long edge `1920`.
 
-WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no MelBandRoFormer, no Whisper, no HuMo model. 
+WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no MelBandRoFormer, no Whisper, no HuMo model. The `WAN 2.2 LN Steps` input controls the number of refinement steps.
 
 ## Dependencies
 
@@ -119,6 +120,7 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 | **ComfyUI_essentials** | `SimpleMath+`, `ImageFromBatch` | https://github.com/cubiq/ComfyUI_essentials |
 | **ComfyUI-VideoHelperSuite** | `VHS_LoadAudioUpload`, `VHS_LoadVideo`, `VHS_VideoInfoSource`, `VHS_SelectEveryNthImage`, `VHS_VideoCombine` | https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite |
 | **ComfyUI-WanVideoWrapper** | `NormalizeAudioLoudness` | https://github.com/kijai/ComfyUI-WanVideoWrapper |
+| **ComfyUI-LTXDimensionCalculator** | `LTXDimensionCalculator`, `LTXFrameCalculator` | https://github.com/ckinpdx/ComfyUI-LTXDimensionCalculator |
 | **Nvidia RTX Nodes** | `RTXVideoSuperResolution` | https://github.com/Comfy-Org/Nvidia_RTX_Nodes_ComfyUI |
 
 > **NormalizeAudioLoudness bug:** If the audio input is very short or near-silence, the BS.1770 loudness measurement returns NaN/inf, producing a poisoned tensor that silently passes through and crashes the video save node with `[Errno 22]` during AAC encoding. Fix in `ComfyUI-WanVideoWrapper/nodes_utility.py`:
@@ -136,7 +138,6 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 |-----------|-----------|------|
 | **WanExperiments** | `WanEx_HuMoImageToVideo`, `WanEx_ContextWindowsAdvanced` | https://github.com/drozbay/WanExperiments |
 | **ComfyUI-MelBandRoFormer** | `MelBandRoFormerModelLoader`, `MelBandRoFormerSampler` | https://github.com/kijai/ComfyUI-MelBandRoFormer |
-| **comfyui-various** | `JWImageResizeByLongerSide` | https://github.com/jamesWalker55/comfyui-various |
 
 > `VHS_SelectEveryNthImage` (VideoHelperSuite) is used to downsample 50 FPS generation to 25 FPS required by HuMo.
 
@@ -144,7 +145,6 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 
 | Node Pack | Nodes Used | Repo |
 |-----------|-----------|------|
-| **ComfyUI-LTXDimensionCalculator** | `LTXDimensionCalculator`, `LTXFrameCalculator` | https://github.com/ckinpdx/ComfyUI-LTXDimensionCalculator |
 | **ComfyUI-KJNodes** | `ColorMatchV2` (additional node — pack already required above) | https://github.com/kijai/ComfyUI-KJNodes |
 
 ## Required Models

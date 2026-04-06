@@ -1,8 +1,8 @@
 {
   "id": "880d0ec7-5f21-4ca4-b64a-17ddee50641e",
   "revision": 0,
-  "last_node_id": 468,
-  "last_link_id": 1128,
+  "last_node_id": 470,
+  "last_link_id": 1135,
   "nodes": [
     {
       "id": 300,
@@ -1656,62 +1656,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 445,
-      "type": "JWImageResizeByLongerSide",
-      "pos": [
-        990,
-        6200
-      ],
-      "size": [
-        240,
-        90
-      ],
-      "flags": {},
-      "order": 79,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 1125
-        },
-        {
-          "name": "size",
-          "type": "INT",
-          "widget": {
-            "name": "size"
-          },
-          "link": 1088
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            1066,
-            1077
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-various",
-        "ver": "5bd85aaf7616878471469c4ec7e11bbd0cef3bf2",
-        "Node name for S&R": "JWImageResizeByLongerSide",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.5.1"
-        }
-      },
-      "widgets_values": [
-        1280,
-        "nearest exact"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 451,
       "type": "AudioEncoderLoader",
       "pos": [
@@ -2083,127 +2027,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 446,
-      "type": "JWImageResizeByLongerSide",
-      "pos": [
-        990,
-        6330
-      ],
-      "size": [
-        240,
-        90
-      ],
-      "flags": {},
-      "order": 60,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 1089
-        },
-        {
-          "name": "size",
-          "type": "INT",
-          "widget": {
-            "name": "size"
-          },
-          "link": 1090
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            1071
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-various",
-        "ver": "5bd85aaf7616878471469c4ec7e11bbd0cef3bf2",
-        "Node name for S&R": "JWImageResizeByLongerSide",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.5.1"
-        }
-      },
-      "widgets_values": [
-        1280,
-        "nearest exact"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 436,
-      "type": "GetImageSizeAndCount",
-      "pos": [
-        990,
-        6460
-      ],
-      "size": [
-        200,
-        90
-      ],
-      "flags": {},
-      "order": 80,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 1066
-        }
-      ],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": []
-        },
-        {
-          "label": "704 width",
-          "name": "width",
-          "type": "INT",
-          "links": [
-            1073
-          ]
-        },
-        {
-          "label": "1280 height",
-          "name": "height",
-          "type": "INT",
-          "links": [
-            1074
-          ]
-        },
-        {
-          "label": "345 count",
-          "name": "count",
-          "type": "INT",
-          "links": [
-            1075
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "f710f2635dbadbaf1ccf7d25572daa7dfec80bfd",
-        "Node name for S&R": "GetImageSizeAndCount",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 429,
       "type": "Sigmas Resample",
       "pos": [
@@ -2270,7 +2093,7 @@
         {
           "name": "pixels",
           "type": "IMAGE",
-          "link": 1077
+          "link": 1132
         },
         {
           "name": "vae",
@@ -2827,7 +2650,7 @@
           "name": "ref_images",
           "shape": 7,
           "type": "IMAGE",
-          "link": 1071
+          "link": 1135
         },
         {
           "name": "start_images",
@@ -2937,7 +2760,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            1089
+            1133
           ]
         }
       ],
@@ -3292,7 +3115,7 @@
           "name": "image_pass",
           "type": "IMAGE",
           "links": [
-            1125
+            1129
           ]
         },
         {
@@ -4578,8 +4401,8 @@
           "name": "INT",
           "type": "INT",
           "links": [
-            1088,
-            1090
+            1130,
+            1134
           ]
         }
       ],
@@ -4888,14 +4711,14 @@
         }
       ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.16.2",
+        "Node name for S&R": "BasicScheduler",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
           "version": "7.7"
-        },
-        "cnr_id": "comfy-core",
-        "ver": "0.16.2",
-        "Node name for S&R": "BasicScheduler"
+        }
       },
       "widgets_values": [
         "beta",
@@ -5016,6 +4839,181 @@
       ],
       "color": "#322",
       "bgcolor": "#533"
+    },
+    {
+      "id": 469,
+      "type": "ResizeImagesByLongerEdge",
+      "pos": [
+        990,
+        6200
+      ],
+      "size": [
+        270,
+        60
+      ],
+      "flags": {},
+      "order": 79,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 1129
+        },
+        {
+          "name": "longer_edge",
+          "type": "INT",
+          "widget": {
+            "name": "longer_edge"
+          },
+          "link": 1130
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            1131,
+            1132
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.1",
+        "Node name for S&R": "ResizeImagesByLongerEdge",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        1024
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 470,
+      "type": "ResizeImagesByLongerEdge",
+      "pos": [
+        990,
+        6300
+      ],
+      "size": [
+        270,
+        60
+      ],
+      "flags": {},
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 1133
+        },
+        {
+          "name": "longer_edge",
+          "type": "INT",
+          "widget": {
+            "name": "longer_edge"
+          },
+          "link": 1134
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            1135
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.1",
+        "Node name for S&R": "ResizeImagesByLongerEdge",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        1024
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 436,
+      "type": "GetImageSizeAndCount",
+      "pos": [
+        990,
+        6400
+      ],
+      "size": [
+        200,
+        90
+      ],
+      "flags": {},
+      "order": 80,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 1131
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "label": "width",
+          "name": "width",
+          "type": "INT",
+          "links": [
+            1073
+          ]
+        },
+        {
+          "label": "height",
+          "name": "height",
+          "type": "INT",
+          "links": [
+            1074
+          ]
+        },
+        {
+          "label": "count",
+          "name": "count",
+          "type": "INT",
+          "links": [
+            1075
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "f710f2635dbadbaf1ccf7d25572daa7dfec80bfd",
+        "Node name for S&R": "GetImageSizeAndCount",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -5716,14 +5714,6 @@
       "FLOAT"
     ],
     [
-      1066,
-      445,
-      0,
-      436,
-      0,
-      "IMAGE"
-    ],
-    [
       1067,
       443,
       0,
@@ -5756,14 +5746,6 @@
       "AUDIO_ENCODER_OUTPUT"
     ],
     [
-      1071,
-      446,
-      0,
-      437,
-      4,
-      "IMAGE"
-    ],
-    [
       1073,
       436,
       1,
@@ -5794,14 +5776,6 @@
       438,
       0,
       "MODEL"
-    ],
-    [
-      1077,
-      445,
-      0,
-      439,
-      0,
-      "IMAGE"
     ],
     [
       1078,
@@ -5874,30 +5848,6 @@
       444,
       0,
       "CLIP"
-    ],
-    [
-      1088,
-      458,
-      0,
-      445,
-      1,
-      "INT"
-    ],
-    [
-      1089,
-      447,
-      0,
-      446,
-      0,
-      "IMAGE"
-    ],
-    [
-      1090,
-      458,
-      0,
-      446,
-      1,
-      "INT"
     ],
     [
       1091,
@@ -5996,14 +5946,6 @@
       "LATENT"
     ],
     [
-      1125,
-      441,
-      1,
-      445,
-      0,
-      "IMAGE"
-    ],
-    [
       1126,
       375,
       0,
@@ -6026,16 +5968,72 @@
       468,
       0,
       "MODEL"
+    ],
+    [
+      1129,
+      441,
+      1,
+      469,
+      0,
+      "IMAGE"
+    ],
+    [
+      1130,
+      458,
+      0,
+      469,
+      1,
+      "INT"
+    ],
+    [
+      1131,
+      469,
+      0,
+      436,
+      0,
+      "IMAGE"
+    ],
+    [
+      1132,
+      469,
+      0,
+      439,
+      0,
+      "IMAGE"
+    ],
+    [
+      1133,
+      447,
+      0,
+      470,
+      0,
+      "IMAGE"
+    ],
+    [
+      1134,
+      458,
+      0,
+      470,
+      1,
+      "INT"
+    ],
+    [
+      1135,
+      470,
+      0,
+      437,
+      4,
+      "IMAGE"
     ]
   ],
   "groups": [],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5857309096719239,
+      "scale": 0.40006209252914726,
       "offset": [
-        887.8614057226557,
-        -4960.471514542892
+        1568.0789824096287,
+        -4956.697095215489
       ]
     },
     "frontendVersion": "1.42.8",
