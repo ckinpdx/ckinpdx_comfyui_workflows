@@ -2,7 +2,7 @@
   "id": "f8864808-4021-42c2-b8ea-64b10fb55593",
   "revision": 0,
   "last_node_id": 1515,
-  "last_link_id": 3092,
+  "last_link_id": 3093,
   "nodes": [
     {
       "id": 496,
@@ -60,7 +60,7 @@
         110
       ],
       "flags": {},
-      "order": 71,
+      "order": 70,
       "mode": 0,
       "inputs": [
         {
@@ -187,7 +187,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 72,
+      "order": 71,
       "mode": 0,
       "inputs": [
         {
@@ -571,7 +571,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 62,
+      "order": 61,
       "mode": 0,
       "inputs": [
         {
@@ -780,7 +780,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 60,
+      "order": 59,
       "mode": 0,
       "inputs": [
         {
@@ -836,7 +836,7 @@
         100
       ],
       "flags": {},
-      "order": 67,
+      "order": 66,
       "mode": 0,
       "inputs": [
         {
@@ -899,7 +899,7 @@
         150
       ],
       "flags": {},
-      "order": 59,
+      "order": 58,
       "mode": 0,
       "inputs": [
         {
@@ -962,7 +962,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 63,
+      "order": 62,
       "mode": 0,
       "inputs": [
         {
@@ -1021,7 +1021,7 @@
         70
       ],
       "flags": {},
-      "order": 68,
+      "order": 67,
       "mode": 0,
       "inputs": [
         {
@@ -1225,7 +1225,7 @@
         110
       ],
       "flags": {},
-      "order": 83,
+      "order": 82,
       "mode": 0,
       "inputs": [
         {
@@ -1338,7 +1338,7 @@
         70
       ],
       "flags": {},
-      "order": 64,
+      "order": 63,
       "mode": 0,
       "inputs": [
         {
@@ -1722,7 +1722,7 @@
         90
       ],
       "flags": {},
-      "order": 61,
+      "order": 60,
       "mode": 0,
       "inputs": [
         {
@@ -1777,7 +1777,7 @@
         440
       ],
       "flags": {},
-      "order": 81,
+      "order": 80,
       "mode": 0,
       "inputs": [
         {
@@ -2003,7 +2003,7 @@
         50
       ],
       "flags": {},
-      "order": 79,
+      "order": 78,
       "mode": 0,
       "inputs": [
         {
@@ -2052,7 +2052,7 @@
         280
       ],
       "flags": {},
-      "order": 80,
+      "order": 79,
       "mode": 0,
       "inputs": [
         {
@@ -2242,7 +2242,7 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            3024
+            3093
           ]
         }
       ],
@@ -2457,7 +2457,7 @@
         50
       ],
       "flags": {},
-      "order": 82,
+      "order": 81,
       "mode": 0,
       "inputs": [
         {
@@ -2506,13 +2506,13 @@
         280
       ],
       "flags": {},
-      "order": 57,
+      "order": 51,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 3010
+          "link": 3093
         }
       ],
       "outputs": [
@@ -2572,7 +2572,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 85,
+      "order": 84,
       "mode": 0,
       "inputs": [
         {
@@ -2914,7 +2914,7 @@
         110
       ],
       "flags": {},
-      "order": 76,
+      "order": 75,
       "mode": 0,
       "inputs": [
         {
@@ -2966,7 +2966,7 @@
         50
       ],
       "flags": {},
-      "order": 74,
+      "order": 73,
       "mode": 0,
       "inputs": [
         {
@@ -3015,7 +3015,7 @@
         50
       ],
       "flags": {},
-      "order": 66,
+      "order": 65,
       "mode": 0,
       "inputs": [
         {
@@ -3066,7 +3066,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 75,
+      "order": 74,
       "mode": 0,
       "inputs": [
         {
@@ -3437,7 +3437,7 @@
         80
       ],
       "flags": {},
-      "order": 84,
+      "order": 83,
       "mode": 0,
       "inputs": [
         {
@@ -3591,7 +3591,7 @@
         110
       ],
       "flags": {},
-      "order": 58,
+      "order": 57,
       "mode": 0,
       "inputs": [
         {
@@ -3639,7 +3639,7 @@
         220
       ],
       "flags": {},
-      "order": 69,
+      "order": 68,
       "mode": 0,
       "inputs": [
         {
@@ -3765,7 +3765,7 @@
         70
       ],
       "flags": {},
-      "order": 73,
+      "order": 72,
       "mode": 0,
       "inputs": [
         {
@@ -3885,7 +3885,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 70,
+      "order": 69,
       "mode": 0,
       "inputs": [
         {
@@ -4210,7 +4210,7 @@
         90
       ],
       "flags": {},
-      "order": 78,
+      "order": 77,
       "mode": 0,
       "inputs": [
         {
@@ -4407,56 +4407,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 1494,
-      "type": "LoraLoaderModelOnly",
-      "pos": [
-        30,
-        3300
-      ],
-      "size": [
-        400,
-        90
-      ],
-      "flags": {},
-      "order": 51,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 3024
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            3010
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.11.1",
-        "Node name for S&R": "LoraLoaderModelOnly",
-        "ue_properties": {
-          "widget_ue_connectable": {
-            "lora_name": true,
-            "strength_model": true
-          },
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "FaceDetailerV1.safetensors",
-        0.6
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
       "id": 1328,
       "type": "EmptyLTXVLatentVideo",
       "pos": [
@@ -4545,7 +4495,7 @@
         50
       ],
       "flags": {},
-      "order": 65,
+      "order": 64,
       "mode": 0,
       "inputs": [
         {
@@ -4737,7 +4687,7 @@
         60
       ],
       "flags": {},
-      "order": 77,
+      "order": 76,
       "mode": 0,
       "inputs": [
         {
@@ -5565,14 +5515,6 @@
       "CLIP"
     ],
     [
-      3010,
-      1494,
-      0,
-      1487,
-      0,
-      "MODEL"
-    ],
-    [
       3012,
       1497,
       0,
@@ -5649,14 +5591,6 @@
       1492,
       0,
       1493,
-      0,
-      "MODEL"
-    ],
-    [
-      3024,
-      1493,
-      0,
-      1494,
       0,
       "MODEL"
     ],
@@ -6011,6 +5945,14 @@
       1489,
       4,
       "IMAGE"
+    ],
+    [
+      3093,
+      1493,
+      0,
+      1487,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [],
@@ -6417,10 +6359,10 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 0.8140274938684023,
+      "scale": 0.5054470284992966,
       "offset": [
-        1130.7373376128141,
-        -4671.977633923324
+        1549.8053452287195,
+        -2536.502673809725
       ]
     }
   },

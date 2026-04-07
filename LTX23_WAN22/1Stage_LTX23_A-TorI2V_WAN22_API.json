@@ -2,7 +2,7 @@
   "id": "9be2ab91-85db-4bf2-b099-747dbb693a14",
   "revision": 0,
   "last_node_id": 1483,
-  "last_link_id": 2982,
+  "last_link_id": 2984,
   "nodes": [
     {
       "id": 1329,
@@ -447,7 +447,7 @@
         110
       ],
       "flags": {},
-      "order": 63,
+      "order": 62,
       "mode": 0,
       "inputs": [
         {
@@ -647,7 +647,7 @@
         150
       ],
       "flags": {},
-      "order": 42,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
@@ -1008,7 +1008,7 @@
         110
       ],
       "flags": {},
-      "order": 43,
+      "order": 44,
       "mode": 0,
       "inputs": [
         {
@@ -1212,7 +1212,7 @@
         70
       ],
       "flags": {},
-      "order": 53,
+      "order": 52,
       "mode": 0,
       "inputs": [
         {
@@ -1266,7 +1266,7 @@
         70
       ],
       "flags": {},
-      "order": 52,
+      "order": 51,
       "mode": 0,
       "inputs": [
         {
@@ -1388,7 +1388,7 @@
         50
       ],
       "flags": {},
-      "order": 54,
+      "order": 53,
       "mode": 0,
       "inputs": [
         {
@@ -1435,10 +1435,10 @@
       ],
       "size": [
         570,
-        656.5365853658536
+        334
       ],
       "flags": {},
-      "order": 55,
+      "order": 54,
       "mode": 0,
       "inputs": [
         {
@@ -1522,7 +1522,7 @@
         80
       ],
       "flags": {},
-      "order": 64,
+      "order": 63,
       "mode": 0,
       "inputs": [
         {
@@ -1621,7 +1621,7 @@
         110
       ],
       "flags": {},
-      "order": 47,
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
@@ -1738,13 +1738,13 @@
         280
       ],
       "flags": {},
-      "order": 44,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 2937
+          "link": 2983
         }
       ],
       "outputs": [
@@ -1782,57 +1782,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 1463,
-      "type": "LoraLoaderModelOnly",
-      "pos": [
-        0,
-        3300
-      ],
-      "size": [
-        400,
-        90
-      ],
-      "flags": {},
-      "order": 40,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 2938
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            2937,
-            2943
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.11.1",
-        "Node name for S&R": "LoraLoaderModelOnly",
-        "ue_properties": {
-          "widget_ue_connectable": {
-            "lora_name": true,
-            "strength_model": true
-          },
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "FaceDetailerV1.safetensors",
-        0.6
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
       "id": 1464,
       "type": "LoraLoaderModelOnly",
       "pos": [
@@ -1858,7 +1807,8 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            2938
+            2983,
+            2984
           ]
         }
       ],
@@ -1894,7 +1844,7 @@
         130
       ],
       "flags": {},
-      "order": 49,
+      "order": 47,
       "mode": 0,
       "inputs": [
         {
@@ -1943,7 +1893,7 @@
         90
       ],
       "flags": {},
-      "order": 51,
+      "order": 49,
       "mode": 0,
       "inputs": [
         {
@@ -1998,13 +1948,13 @@
         130
       ],
       "flags": {},
-      "order": 45,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 2943
+          "link": 2984
         }
       ],
       "outputs": [
@@ -2135,47 +2085,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 1471,
-      "type": "FloatConstant",
-      "pos": [
-        910,
-        4940
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "value",
-          "type": "FLOAT",
-          "links": [
-            2932,
-            2942
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "9086a8dfb6657937b8fc0501aad6b903244bd2a7",
-        "Node name for S&R": "FloatConstant",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        0.625
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 1457,
       "type": "DiffusionModelLoaderKJ",
       "pos": [
@@ -2187,7 +2096,7 @@
         180
       ],
       "flags": {},
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -2239,7 +2148,7 @@
         110
       ],
       "flags": {},
-      "order": 11,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2286,7 +2195,7 @@
         50
       ],
       "flags": {},
-      "order": 61,
+      "order": 60,
       "mode": 0,
       "inputs": [
         {
@@ -2335,7 +2244,7 @@
         130
       ],
       "flags": {},
-      "order": 62,
+      "order": 61,
       "mode": 0,
       "inputs": [
         {
@@ -2390,7 +2299,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 65,
+      "order": 64,
       "mode": 0,
       "inputs": [
         {
@@ -2431,7 +2340,7 @@
         130
       ],
       "flags": {},
-      "order": 41,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -2696,7 +2605,7 @@
         440
       ],
       "flags": {},
-      "order": 60,
+      "order": 59,
       "mode": 0,
       "inputs": [
         {
@@ -2936,7 +2845,7 @@
         200
       ],
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3045,7 +2954,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 13,
+      "order": 12,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3087,7 +2996,7 @@
         110
       ],
       "flags": {},
-      "order": 56,
+      "order": 55,
       "mode": 0,
       "inputs": [
         {
@@ -3139,7 +3048,7 @@
         50
       ],
       "flags": {},
-      "order": 59,
+      "order": 58,
       "mode": 0,
       "inputs": [
         {
@@ -3188,7 +3097,7 @@
         190
       ],
       "flags": {},
-      "order": 57,
+      "order": 56,
       "mode": 0,
       "inputs": [
         {
@@ -3271,7 +3180,7 @@
         60
       ],
       "flags": {},
-      "order": 58,
+      "order": 57,
       "mode": 0,
       "inputs": [
         {
@@ -3325,7 +3234,7 @@
         90
       ],
       "flags": {},
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3368,7 +3277,7 @@
         90
       ],
       "flags": {},
-      "order": 15,
+      "order": 14,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3410,7 +3319,7 @@
         190
       ],
       "flags": {},
-      "order": 16,
+      "order": 15,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3478,7 +3387,7 @@
         120
       ],
       "flags": {},
-      "order": 17,
+      "order": 16,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -3507,7 +3416,7 @@
         60
       ],
       "flags": {},
-      "order": 18,
+      "order": 17,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3548,7 +3457,7 @@
         210
       ],
       "flags": {},
-      "order": 19,
+      "order": 18,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3648,6 +3557,47 @@
       ],
       "color": "#232",
       "bgcolor": "#353"
+    },
+    {
+      "id": 1471,
+      "type": "FloatConstant",
+      "pos": [
+        910,
+        4940
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "FLOAT",
+          "links": [
+            2932,
+            2942
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "9086a8dfb6657937b8fc0501aad6b903244bd2a7",
+        "Node name for S&R": "FloatConstant",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        0.55
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -4052,22 +4002,6 @@
       "VAE"
     ],
     [
-      2937,
-      1463,
-      0,
-      1462,
-      0,
-      "MODEL"
-    ],
-    [
-      2938,
-      1464,
-      0,
-      1463,
-      0,
-      "MODEL"
-    ],
-    [
       2939,
       1470,
       0,
@@ -4098,14 +4032,6 @@
       1466,
       1,
       "FLOAT"
-    ],
-    [
-      2943,
-      1463,
-      0,
-      1467,
-      0,
-      "MODEL"
     ],
     [
       2944,
@@ -4338,6 +4264,22 @@
       1331,
       3,
       "BOOLEAN"
+    ],
+    [
+      2983,
+      1464,
+      0,
+      1462,
+      0,
+      "MODEL"
+    ],
+    [
+      2984,
+      1464,
+      0,
+      1467,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [],
@@ -4744,10 +4686,10 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 0.23579476910000335,
+      "scale": 0.285311670611005,
       "offset": [
-        3015.7331602189283,
-        -2743.2973370127443
+        2138.0361577663816,
+        -2546.484061997661
       ]
     }
   },

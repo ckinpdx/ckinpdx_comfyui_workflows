@@ -2,7 +2,7 @@
   "id": "880d0ec7-5f21-4ca4-b64a-17ddee50641e",
   "revision": 0,
   "last_node_id": 470,
-  "last_link_id": 1135,
+  "last_link_id": 1137,
   "nodes": [
     {
       "id": 300,
@@ -379,7 +379,7 @@
         110
       ],
       "flags": {},
-      "order": 74,
+      "order": 73,
       "mode": 0,
       "inputs": [
         {
@@ -499,7 +499,7 @@
         80
       ],
       "flags": {},
-      "order": 86,
+      "order": 85,
       "mode": 0,
       "inputs": [
         {
@@ -818,7 +818,7 @@
         110
       ],
       "flags": {},
-      "order": 66,
+      "order": 65,
       "mode": 0,
       "inputs": [
         {
@@ -894,7 +894,7 @@
         70
       ],
       "flags": {},
-      "order": 68,
+      "order": 67,
       "mode": 0,
       "inputs": [
         {
@@ -1016,7 +1016,7 @@
         50
       ],
       "flags": {},
-      "order": 69,
+      "order": 68,
       "mode": 0,
       "inputs": [
         {
@@ -1272,13 +1272,13 @@
         130
       ],
       "flags": {},
-      "order": 54,
+      "order": 47,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 1058
+          "link": 1136
         }
       ],
       "outputs": [
@@ -1321,7 +1321,7 @@
         110
       ],
       "flags": {},
-      "order": 61,
+      "order": 55,
       "mode": 0,
       "inputs": [
         {
@@ -1381,7 +1381,7 @@
         50
       ],
       "flags": {},
-      "order": 73,
+      "order": 72,
       "mode": 0,
       "inputs": [
         {
@@ -1435,7 +1435,7 @@
         90
       ],
       "flags": {},
-      "order": 65,
+      "order": 63,
       "mode": 0,
       "inputs": [
         {
@@ -1490,7 +1490,7 @@
         440
       ],
       "flags": {},
-      "order": 83,
+      "order": 82,
       "mode": 0,
       "inputs": [
         {
@@ -1912,7 +1912,8 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            1096
+            1136,
+            1137
           ]
         }
       ],
@@ -1989,7 +1990,7 @@
         50
       ],
       "flags": {},
-      "order": 75,
+      "order": 74,
       "mode": 0,
       "inputs": [
         {
@@ -2038,7 +2039,7 @@
         130
       ],
       "flags": {},
-      "order": 63,
+      "order": 61,
       "mode": 0,
       "inputs": [
         {
@@ -2087,7 +2088,7 @@
         50
       ],
       "flags": {},
-      "order": 81,
+      "order": 80,
       "mode": 0,
       "inputs": [
         {
@@ -2136,13 +2137,13 @@
         280
       ],
       "flags": {},
-      "order": 55,
+      "order": 48,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 1076
+          "link": 1137
         }
       ],
       "outputs": [
@@ -2202,7 +2203,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 84,
+      "order": 83,
       "mode": 0,
       "inputs": [
         {
@@ -2251,7 +2252,7 @@
         110
       ],
       "flags": {},
-      "order": 85,
+      "order": 84,
       "mode": 0,
       "inputs": [
         {
@@ -2299,7 +2300,7 @@
         1280
       ],
       "flags": {},
-      "order": 87,
+      "order": 86,
       "mode": 0,
       "inputs": [
         {
@@ -2409,57 +2410,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 457,
-      "type": "LoraLoaderModelOnly",
-      "pos": [
-        -1290,
-        4940
-      ],
-      "size": [
-        400,
-        90
-      ],
-      "flags": {},
-      "order": 47,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 1096
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            1058,
-            1076
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.11.1",
-        "Node name for S&R": "LoraLoaderModelOnly",
-        "ue_properties": {
-          "widget_ue_connectable": {
-            "lora_name": true,
-            "strength_model": true
-          },
-          "version": "7.5.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "FaceDetailerV1.safetensors",
-        0.6
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
       "id": 455,
       "type": "ModelSamplingSD3",
       "pos": [
@@ -2519,7 +2469,7 @@
         180
       ],
       "flags": {},
-      "order": 48,
+      "order": 49,
       "mode": 0,
       "inputs": [
         {
@@ -2570,7 +2520,7 @@
         180
       ],
       "flags": {},
-      "order": 49,
+      "order": 50,
       "mode": 0,
       "inputs": [
         {
@@ -2622,7 +2572,7 @@
         280
       ],
       "flags": {},
-      "order": 82,
+      "order": 81,
       "mode": 0,
       "inputs": [
         {
@@ -2746,7 +2696,7 @@
         90
       ],
       "flags": {},
-      "order": 52,
+      "order": 53,
       "mode": 0,
       "inputs": [
         {
@@ -2962,7 +2912,7 @@
         50
       ],
       "flags": {},
-      "order": 51,
+      "order": 52,
       "mode": 0,
       "inputs": [
         {
@@ -3083,7 +3033,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 78,
+      "order": 77,
       "mode": 0,
       "inputs": [
         {
@@ -3166,7 +3116,7 @@
         50
       ],
       "flags": {},
-      "order": 70,
+      "order": 69,
       "mode": 0,
       "inputs": [
         {
@@ -3217,7 +3167,7 @@
         50
       ],
       "flags": {},
-      "order": 67,
+      "order": 66,
       "mode": 0,
       "inputs": [
         {
@@ -3271,7 +3221,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 76,
+      "order": 75,
       "mode": 0,
       "inputs": [
         {
@@ -3395,7 +3345,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 50,
+      "order": 51,
       "mode": 0,
       "inputs": [
         {
@@ -3743,7 +3693,7 @@
         50
       ],
       "flags": {},
-      "order": 53,
+      "order": 54,
       "mode": 0,
       "inputs": [
         {
@@ -3992,7 +3942,7 @@
         50
       ],
       "flags": {},
-      "order": 77,
+      "order": 76,
       "mode": 0,
       "inputs": [
         {
@@ -4186,7 +4136,7 @@
         60
       ],
       "flags": {},
-      "order": 72,
+      "order": 71,
       "mode": 0,
       "inputs": [
         {
@@ -4742,7 +4692,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 71,
+      "order": 70,
       "mode": 0,
       "inputs": [
         {
@@ -4852,7 +4802,7 @@
         60
       ],
       "flags": {},
-      "order": 79,
+      "order": 78,
       "mode": 0,
       "inputs": [
         {
@@ -4961,7 +4911,7 @@
         90
       ],
       "flags": {},
-      "order": 80,
+      "order": 79,
       "mode": 0,
       "inputs": [
         {
@@ -5650,14 +5600,6 @@
       "SIGMAS"
     ],
     [
-      1058,
-      457,
-      0,
-      430,
-      0,
-      "MODEL"
-    ],
-    [
       1059,
       430,
       0,
@@ -5770,14 +5712,6 @@
       "INT"
     ],
     [
-      1076,
-      457,
-      0,
-      438,
-      0,
-      "MODEL"
-    ],
-    [
       1078,
       453,
       0,
@@ -5878,14 +5812,6 @@
       455,
       0,
       456,
-      0,
-      "MODEL"
-    ],
-    [
-      1096,
-      456,
-      0,
-      457,
       0,
       "MODEL"
     ],
@@ -6024,16 +5950,32 @@
       437,
       4,
       "IMAGE"
+    ],
+    [
+      1136,
+      456,
+      0,
+      430,
+      0,
+      "MODEL"
+    ],
+    [
+      1137,
+      456,
+      0,
+      438,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.40006209252914726,
+      "scale": 0.6443040006391175,
       "offset": [
-        1568.0789824096287,
-        -4956.697095215489
+        2380.61660599834,
+        -4410.65973131286
       ]
     },
     "frontendVersion": "1.42.8",
