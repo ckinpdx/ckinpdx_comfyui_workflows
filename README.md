@@ -1,8 +1,8 @@
 # ckinpdx ComfyUI Workflows
 
-LTX Video 2.3 workflows built in the ComfyUI UI, structured for clean export to API format. No Get/Set nodes or subgraphs are used, as these do not survive the UI→API conversion.
+LTX Video 2.3 workflows built in the ComfyUI UI, structured for clean export to API format. No Get/Set nodes or subgraphs are used, as these are not needed for the UI→API conversion.
 
-These workflows prioritize quality over efficiency and are built for high-end hardware (RTX 5090, 96GB DDR5 RAM). They reflect the creator's ongoing research into techniques and approaches gathered from community workflows across the internet.
+These workflows prioritize quality over efficiency and are built for high-end consumer hardware (RTX 5090, 96GB DDR5 RAM). They reflect the creator's ongoing research into techniques and approaches gathered from community workflows across the internet.
 
 Core pipeline: two-stage latent upsampling with RTX Video Super Resolution output.
 
@@ -22,7 +22,7 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 | `I2V` | Image to Video (start frame) |
 | `A-I2V` | Audio + Image to Video |
 | `_Continuation` | True video continuation — loads an existing video and generates new frames from a specified start point forward |
-| `_IDLora` | Identity LoRA — character/face consistency via reference image |
+| `_IDLora` | Identity LoRA — voice cloning via reference audio |
 | `_HuMo` | Includes human motion module (see dependencies) |
 | `_WAN22` | Wan 2.2 low-noise refinement pass instead of HuMo (see dependencies) |
 | `_API` | Structured for API export (no Get/Set nodes or subgraphs) |
@@ -106,7 +106,7 @@ The **HuMo Long Edge** input controls the resolution fed to the HuMo model. Reco
 
 **Choosing compatible dimensions is non-trivial.** LTX, HuMo, and the rescale step each impose constraints, and the interaction between them — particularly across different workflow types — means a combination that works in one workflow may fail in another. Expect to test combinations rather than derive them from first principles. Known working baseline: LTX `2560×1440`, HuMo long edge `1920`.
 
-WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no MelBandRoFormer, no Whisper, no HuMo model. The `WAN 2.2 LN Steps` input controls the number of refinement steps.
+WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no MelBandRoFormer, no Whisper, no HuMo model.
 
 ## Dependencies
 
@@ -123,14 +123,7 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 | **ComfyUI-LTXDimensionCalculator** | `LTXDimensionCalculator`, `LTXFrameCalculator` | https://github.com/ckinpdx/ComfyUI-LTXDimensionCalculator |
 | **Nvidia RTX Nodes** | `RTXVideoSuperResolution` | https://github.com/Comfy-Org/Nvidia_RTX_Nodes_ComfyUI |
 
-> **NormalizeAudioLoudness bug:** If the audio input is very short or near-silence, the BS.1770 loudness measurement returns NaN/inf, producing a poisoned tensor that silently passes through and crashes the video save node with `[Errno 22]` during AAC encoding. Fix in `ComfyUI-WanVideoWrapper/nodes_utility.py`:
-> ```python
-> # before
-> if abs(loudness) > 100:
-> # after
-> if not np.isfinite(loudness) or abs(loudness) > 100:
-> ```
-> The node will then return audio unchanged rather than passing a NaN tensor downstream.
+
 
 ### HuMo workflows (additional)
 
@@ -170,7 +163,6 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 | `Wan2_1_VAE_bf16.safetensors` | Wan 2.1 VAE (used by HuMo) |
 | `umt5_xxl_fp8_e4m3fn_scaled.safetensors` | UMT5-XXL text encoder (used by HuMo) |
 | `lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors` | LightX2V distilled LoRA |
-| `FaceDetailerV1.safetensors` | Face detail LoRA |
 | `MelBandRoformer_fp16.safetensors` | MelBand RoFormer audio separator |
 | `whisper_large_v3_encoder_fp16.safetensors` | Whisper large-v3 audio encoder |
 
@@ -182,4 +174,4 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 | `Wan2_1_VAE_bf16.safetensors` | Wan 2.1 VAE |
 | `umt5_xxl_fp8_e4m3fn_scaled.safetensors` | UMT5-XXL text encoder |
 | `lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors` | LightX2V distilled LoRA |
-| `FaceDetailerV1.safetensors` | Face detail LoRA |
+
