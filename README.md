@@ -9,7 +9,7 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 ## Naming Convention
 
 ```
-[1Stage_] LTX23 [_A-] [TorI2V | _FLF-I2V | _FLF-A-I2V | _Continuation] [_IDLora] [_HuMo | _WAN22] _API
+[1Stage_] LTX23 [_A-] [TorI2V | _FLF-I2V | _FLF-A-I2V | _Continuation] [_IDLora] [_HuMo | _WAN22 | _TRIPLE] _API
 ```
 
 | Segment | Meaning |
@@ -25,6 +25,7 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 | `_IDLora` | Identity LoRA — voice cloning via reference audio |
 | `_HuMo` | Includes human motion module (see dependencies) |
 | `_WAN22` | Wan 2.2 low-noise refinement pass instead of HuMo (see dependencies) |
+| `_TRIPLE` | Triple-stage sampling — quarter res → half res → full res (see pipeline features) |
 | `_API` | Structured for API export (no Get/Set nodes or subgraphs) |
 
 ## Workflows
@@ -41,6 +42,11 @@ Base workflows — LTX 2.3 only, no motion refinement.
 | `LTX23_FLF-I2V_API.json` | First and last frame I2V — generates content between a start and end frame. |
 | `LTX23_FLF-A-I2V_API.json` | First and last frame A-I2V with audio. |
 | `LTX23_Continuation_API.json` | True video continuation — loads a video and generates new frames from a specified start point. |
+| `LTX23_TorI2V_TRIPLE_API.json` | T2V or I2V toggle, triple-stage sampling. |
+| `LTX23_A-TorI2V_TRIPLE_API.json` | T2V or I2V toggle with audio, triple-stage sampling. |
+| `LTX23_TorI2V_IDLora_TRIPLE_API.json` | T2V or I2V toggle with identity LoRA, triple-stage sampling. |
+| `LTX23_FLF-I2V_TRIPLE_API.json` | First and last frame I2V, triple-stage sampling. |
+| `LTX23_FLF-A-I2V_TRIPLE_API.json` | First and last frame A-I2V with audio, triple-stage sampling. |
 
 ### LTX23_HuMo/
 
@@ -92,6 +98,8 @@ All workflows share:
 - **FADE-labeled primitives** — exposed inputs for use with the FADE API layer
 
 Most workflows use a **two-stage generation** pipeline — low-res draft pass → latent upsample → full-res refinement. `1Stage_` workflows skip the first stage.
+
+`_TRIPLE` workflows use a **three-stage pipeline** — quarter res → half res → full res. Up to 4x faster than two-stage at comparable quality. Because the quarter-res stage requires div-by-32 dimensions, the final output resolution must be **divisible by 128**. No refined variants (HuMo/WAN22) are provided for triple-stage.
 
 `TorI2V` workflows use a **boolean toggle** (`T2V True` / `I2V False`) to switch between text-to-video and image-to-video mode in a single workflow.
 
