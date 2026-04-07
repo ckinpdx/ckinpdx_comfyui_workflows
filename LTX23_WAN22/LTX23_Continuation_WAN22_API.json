@@ -3805,90 +3805,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 510,
-      "type": "VRAM_Debug",
-      "pos": [
-        930,
-        5860
-      ],
-      "size": [
-        210,
-        190
-      ],
-      "flags": {},
-      "order": 71,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "any_input",
-          "shape": 7,
-          "type": "*",
-          "link": null
-        },
-        {
-          "name": "image_pass",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 1194
-        },
-        {
-          "name": "model_pass",
-          "shape": 7,
-          "type": "MODEL",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "any_output",
-          "type": "*",
-          "links": null
-        },
-        {
-          "name": "image_pass",
-          "type": "IMAGE",
-          "links": [
-            1192,
-            1195
-          ]
-        },
-        {
-          "name": "model_pass",
-          "type": "MODEL",
-          "links": null
-        },
-        {
-          "label": "freemem_before",
-          "name": "freemem_before",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "label": "freemem_after",
-          "name": "freemem_after",
-          "type": "INT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "e56b3061ed49251a7b8a5450a2e18295548ea7a1",
-        "Node name for S&R": "VRAM_Debug",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        true,
-        true,
-        false
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 511,
       "type": "PrimitiveInt",
       "pos": [
@@ -4437,6 +4353,90 @@
       },
       "widgets_values": [
         0.55
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 510,
+      "type": "VRAM_Debug",
+      "pos": [
+        930,
+        5860
+      ],
+      "size": [
+        210,
+        190
+      ],
+      "flags": {},
+      "order": 71,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "any_input",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "image_pass",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 1194
+        },
+        {
+          "name": "model_pass",
+          "shape": 7,
+          "type": "MODEL",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "any_output",
+          "type": "*",
+          "links": null
+        },
+        {
+          "name": "image_pass",
+          "type": "IMAGE",
+          "links": [
+            1192,
+            1195
+          ]
+        },
+        {
+          "name": "model_pass",
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "label": "freemem_before",
+          "name": "freemem_before",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "label": "freemem_after",
+          "name": "freemem_after",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "e56b3061ed49251a7b8a5450a2e18295548ea7a1",
+        "Node name for S&R": "VRAM_Debug",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        true,
+        true,
+        true
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -5296,10 +5296,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7087344007030352,
+      "scale": 0.4840751319602726,
       "offset": [
-        2490.461872068799,
-        -6337.867086035004
+        1485.6356645451174,
+        -4943.139951272732
       ]
     },
     "frontendVersion": "1.42.8",
