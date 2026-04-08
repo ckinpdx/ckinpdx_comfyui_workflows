@@ -161,7 +161,7 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 | `LTX23_audio_vae_bf16.safetensors` | LTX 2.3 audio VAE |
 | `ltx-2.3-spatial-upscaler-x2-1.1.safetensors` | LTX 2.3 spatial upscaler (2x) |
 | `ltx-2.3-22b-distilled-lora-384.safetensors` | LTX 2.3 distilled LoRA (in two-stage workflows, loaded twice at different weights per stage) |
-| `ltx-2.3-id-lora-celebvhq-3k.safetensors` | Identity LoRA for character/face consistency (`IDLora` workflows) |
+| `ltx-2.3-id-lora-celebvhq-3k.safetensors` | Identity LoRA for reference audio consistency (`IDLora` workflows) |
 
 ### HuMo workflows (additional)
 
