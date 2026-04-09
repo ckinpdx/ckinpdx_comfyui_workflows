@@ -1,8 +1,8 @@
 {
-  "id": "f619839c-effa-4a6d-a2d3-28bf1ef3d127",
+  "id": "af0ea2d2-5c82-4ad2-9e3d-3e4daa3d3adc",
   "revision": 0,
-  "last_node_id": 4964,
-  "last_link_id": 13697,
+  "last_node_id": 4967,
+  "last_link_id": 13702,
   "nodes": [
     {
       "id": 4927,
@@ -428,55 +428,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 4917,
-      "type": "VAEDecode",
-      "pos": [
-        4500,
-        4910
-      ],
-      "size": [
-        140,
-        50
-      ],
-      "flags": {},
-      "order": 23,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 13589
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 13624
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            13678
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.18.1",
-        "Node name for S&R": "VAEDecode",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 4934,
       "type": "VAELoaderKJ",
       "pos": [
@@ -532,7 +483,7 @@
         570
       ],
       "flags": {},
-      "order": 25,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -891,47 +842,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 4956,
-      "type": "PrimitiveFloat",
-      "pos": [
-        3440,
-        5050
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            13689
-          ]
-        }
-      ],
-      "title": "FPS",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.18.1",
-        "Node name for S&R": "PrimitiveFloat",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        25
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 4940,
       "type": "BasicScheduler",
       "pos": [
@@ -993,7 +903,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1026,14 +936,14 @@
       "type": "LTXDimensionCalculator",
       "pos": [
         3440,
-        5150
+        5170
       ],
       "size": [
         210,
         190
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1186,130 +1096,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 4924,
-      "type": "VHS_LoadVideo",
-      "pos": [
-        3160,
-        4940
-      ],
-      "size": [
-        260,
-        452
-      ],
-      "flags": {},
-      "order": 18,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "meta_batch",
-          "shape": 7,
-          "type": "VHS_BatchManager",
-          "link": null
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": null
-        },
-        {
-          "name": "force_rate",
-          "type": "FLOAT",
-          "widget": {
-            "name": "force_rate"
-          },
-          "link": 13693
-        },
-        {
-          "name": "custom_width",
-          "type": "INT",
-          "widget": {
-            "name": "custom_width"
-          },
-          "link": 13687
-        },
-        {
-          "name": "custom_height",
-          "type": "INT",
-          "widget": {
-            "name": "custom_height"
-          },
-          "link": 13688
-        },
-        {
-          "name": "frame_load_cap",
-          "type": "INT",
-          "widget": {
-            "name": "frame_load_cap"
-          },
-          "link": 13696
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            13679
-          ]
-        },
-        {
-          "name": "frame_count",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "name": "audio",
-          "type": "AUDIO",
-          "links": [
-            13635
-          ]
-        },
-        {
-          "name": "video_info",
-          "type": "VHS_VIDEOINFO",
-          "links": []
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-videohelpersuite",
-        "ver": "1.7.9",
-        "Node name for S&R": "VHS_LoadVideo",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": {
-        "video": "video_00011-audio.mp4",
-        "force_rate": 0,
-        "custom_width": 0,
-        "custom_height": 0,
-        "frame_load_cap": 129,
-        "skip_first_frames": 0,
-        "select_every_nth": 1,
-        "format": "LTXV",
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "filename": "video_00011-audio.mp4",
-            "type": "input",
-            "format": "video/mp4",
-            "force_rate": 0,
-            "custom_width": 0,
-            "custom_height": 1920,
-            "frame_load_cap": 129,
-            "skip_first_frames": 0,
-            "select_every_nth": 1
-          }
-        }
-      },
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 4880,
       "type": "LTXVLoopingSampler",
       "pos": [
@@ -1435,7 +1221,7 @@
       ],
       "size": [
         210,
-        110
+        130
       ],
       "flags": {},
       "order": 16,
@@ -1457,6 +1243,11 @@
           "links": [
             13696
           ]
+        },
+        {
+          "name": "latent_frames",
+          "type": "INT",
+          "links": null
         },
         {
           "name": "actual_seconds",
@@ -1493,16 +1284,385 @@
         90
       ],
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [],
-      "properties": {},
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.7",
+          "input_ue_unconnectable": {}
+        }
+      },
       "widgets_values": [
         "Upload the same video twice. I don't know how to detect the source FPS and force the FPS using the same loader node"
       ],
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 4966,
+      "type": "CreateVideo",
+      "pos": [
+        4660,
+        5520
+      ],
+      "size": [
+        270,
+        80
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 13699
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 13702
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            13698
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.1",
+        "Node name for S&R": "CreateVideo",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        30
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 4967,
+      "type": "ImageConcatMulti",
+      "pos": [
+        4370,
+        5520
+      ],
+      "size": [
+        270,
+        150
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_1",
+          "type": "IMAGE",
+          "link": 13701
+        },
+        {
+          "name": "image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 13700
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            13699
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "068d4fee62d379723dd96dd3e768ed807f7d7135",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        2,
+        "right",
+        true,
+        null
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 4965,
+      "type": "SaveVideo",
+      "pos": [
+        4950,
+        5520
+      ],
+      "size": [
+        640,
+        570
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 13698
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.1",
+        "Node name for S&R": "SaveVideo",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 4917,
+      "type": "VAEDecode",
+      "pos": [
+        4500,
+        4910
+      ],
+      "size": [
+        140,
+        50
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 13589
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 13624
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            13678,
+            13700
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.1",
+        "Node name for S&R": "VAEDecode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 4924,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        3160,
+        4940
+      ],
+      "size": [
+        260,
+        452
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "force_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "force_rate"
+          },
+          "link": 13693
+        },
+        {
+          "name": "custom_width",
+          "type": "INT",
+          "widget": {
+            "name": "custom_width"
+          },
+          "link": 13687
+        },
+        {
+          "name": "custom_height",
+          "type": "INT",
+          "widget": {
+            "name": "custom_height"
+          },
+          "link": 13688
+        },
+        {
+          "name": "frame_load_cap",
+          "type": "INT",
+          "widget": {
+            "name": "frame_load_cap"
+          },
+          "link": 13696
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            13679,
+            13701
+          ]
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            13635,
+            13702
+          ]
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "1.7.9",
+        "Node name for S&R": "VHS_LoadVideo",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": {
+        "video": "video_00011-audio.mp4",
+        "force_rate": 0,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 129,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "LTXV",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "video_00011-audio.mp4",
+            "type": "input",
+            "format": "video/mp4",
+            "force_rate": 0,
+            "custom_width": 0,
+            "custom_height": 1920,
+            "frame_load_cap": 129,
+            "skip_first_frames": 0,
+            "select_every_nth": 1
+          }
+        }
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 4956,
+      "type": "PrimitiveFloat",
+      "pos": [
+        3440,
+        5070
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            13689
+          ]
+        }
+      ],
+      "title": "FPS",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.1",
+        "Node name for S&R": "PrimitiveFloat",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        25
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
     }
   ],
   "links": [
@@ -1777,6 +1937,46 @@
       4924,
       5,
       "INT"
+    ],
+    [
+      13698,
+      4966,
+      0,
+      4965,
+      0,
+      "VIDEO"
+    ],
+    [
+      13699,
+      4967,
+      0,
+      4966,
+      0,
+      "IMAGE"
+    ],
+    [
+      13700,
+      4917,
+      0,
+      4967,
+      1,
+      "IMAGE"
+    ],
+    [
+      13701,
+      4924,
+      0,
+      4967,
+      0,
+      "IMAGE"
+    ],
+    [
+      13702,
+      4924,
+      2,
+      4966,
+      1,
+      "AUDIO"
     ]
   ],
   "groups": [],
@@ -1786,10 +1986,10 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 0.31084596491805067,
+      "scale": 0.6057508473018061,
       "offset": [
-        -1374.8353296060745,
-        -3471.488571857598
+        -2504.0500374680037,
+        -4351.891965869482
       ]
     },
     "frontendVersion": "1.42.8",
