@@ -2,7 +2,7 @@
   "id": "af0ea2d2-5c82-4ad2-9e3d-3e4daa3d3adc",
   "revision": 0,
   "last_node_id": 4970,
-  "last_link_id": 13717,
+  "last_link_id": 13718,
   "nodes": [
     {
       "id": 4927,
@@ -439,7 +439,7 @@
         570
       ],
       "flags": {},
-      "order": 22,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -725,161 +725,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 4966,
-      "type": "CreateVideo",
-      "pos": [
-        4660,
-        5520
-      ],
-      "size": [
-        270,
-        80
-      ],
-      "flags": {},
-      "order": 23,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 13699
-        },
-        {
-          "name": "audio",
-          "shape": 7,
-          "type": "AUDIO",
-          "link": 13709
-        },
-        {
-          "name": "fps",
-          "type": "FLOAT",
-          "widget": {
-            "name": "fps"
-          },
-          "link": 13706
-        }
-      ],
-      "outputs": [
-        {
-          "name": "VIDEO",
-          "type": "VIDEO",
-          "links": [
-            13698
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.18.1",
-        "Node name for S&R": "CreateVideo",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        30
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 4967,
-      "type": "ImageConcatMulti",
-      "pos": [
-        4370,
-        5520
-      ],
-      "size": [
-        270,
-        150
-      ],
-      "flags": {},
-      "order": 21,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image_1",
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "image_2",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 13700
-        }
-      ],
-      "outputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "links": [
-            13699
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "068d4fee62d379723dd96dd3e768ed807f7d7135",
-        "Node name for S&R": "ImageConcatMulti",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        2,
-        "right",
-        true,
-        null
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 4965,
-      "type": "SaveVideo",
-      "pos": [
-        4950,
-        5520
-      ],
-      "size": [
-        640,
-        570
-      ],
-      "flags": {},
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "video",
-          "type": "VIDEO",
-          "link": 13698
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.18.1",
-        "Node name for S&R": "SaveVideo",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "video/ComfyUI",
-        "auto",
-        "auto"
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 4917,
       "type": "VAEDecode",
       "pos": [
@@ -910,8 +755,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            13678,
-            13700
+            13678
           ]
         }
       ],
@@ -1116,16 +960,14 @@
           "name": "audio",
           "type": "AUDIO",
           "links": [
-            13708,
-            13709
+            13708
           ]
         },
         {
           "name": "fps",
           "type": "FLOAT",
           "links": [
-            13705,
-            13706
+            13705
           ]
         },
         {
@@ -1358,7 +1200,7 @@
       ],
       "size": [
         280,
-        254
+        170
       ],
       "flags": {
         "collapsed": true
@@ -1586,30 +1428,6 @@
       "IMAGE"
     ],
     [
-      13698,
-      4966,
-      0,
-      4965,
-      0,
-      "VIDEO"
-    ],
-    [
-      13699,
-      4967,
-      0,
-      4966,
-      0,
-      "IMAGE"
-    ],
-    [
-      13700,
-      4917,
-      0,
-      4967,
-      1,
-      "IMAGE"
-    ],
-    [
       13703,
       4969,
       0,
@@ -1634,26 +1452,10 @@
       "FLOAT"
     ],
     [
-      13706,
-      4968,
-      2,
-      4966,
-      2,
-      "FLOAT"
-    ],
-    [
       13708,
       4968,
       1,
       4937,
-      1,
-      "AUDIO"
-    ],
-    [
-      13709,
-      4968,
-      1,
-      4966,
       1,
       "AUDIO"
     ],
@@ -1731,8 +1533,8 @@
     "ds": {
       "scale": 0.6663259320319873,
       "offset": [
-        -2723.2065181945973,
-        -4327.861185490107
+        -2655.1119170830293,
+        -4403.043146414737
       ]
     },
     "frontendVersion": "1.42.8",
