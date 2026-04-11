@@ -9,7 +9,7 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 ## Naming Convention
 
 ```
-[1Stage_] LTX23 [_A-] [TorI2V | _FLF-I2V | _FLF-A-I2V | _Continuation] [_IDLora] [_HuMo | _WAN22 | _TRIPLE] _API
+[1Stage_] LTX23 [_A-] [TorI2V | _FLF-I2V | _FLF-A-I2V | _Continuation | _ReDub | _V2V_* | _LatentLooping_*] [_IDLora] [_HuMo | _WAN22 | _TRIPLE] _API
 ```
 
 | Segment | Meaning |
@@ -22,7 +22,10 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 | `I2V` | Image to Video (start frame) |
 | `A-I2V` | Audio + Image to Video |
 | `_Continuation` | True video continuation — loads an existing video and generates new frames from a specified start point forward |
-| `_IDLora` | Identity LoRA — voice cloning via reference audio |
+| `_ReDub` | Re-dub an existing video with new audio using identity LoRA |
+| `_V2V` | Video to video — transforms existing video content |
+| `_LatentLooping` | Latent looping — iterative generation using prior output as reference |
+| `_IDLora` | Identity LoRA — audio/voice consistency via reference |
 | `_HuMo` | Includes human motion module (see dependencies) |
 | `_WAN22` | Wan 2.2 low-noise refinement pass instead of HuMo (see dependencies) |
 | `_TRIPLE` | Triple-stage sampling — quarter res → half res → full res (see pipeline features) |
@@ -42,11 +45,16 @@ Base workflows — LTX 2.3 only, no motion refinement.
 | `LTX23_FLF-I2V_API.json` | First and last frame I2V — generates content between a start and end frame. |
 | `LTX23_FLF-A-I2V_API.json` | First and last frame A-I2V with audio. |
 | `LTX23_Continuation_API.json` | True video continuation — loads a video and generates new frames from a specified start point. |
+| `1Stage_LTX23_TorI2V_API.json` | Single-stage T2V or I2V toggle. |
 | `LTX23_TorI2V_TRIPLE_API.json` | T2V or I2V toggle, triple-stage sampling. |
 | `LTX23_A-TorI2V_TRIPLE_API.json` | T2V or I2V toggle with audio, triple-stage sampling. |
 | `LTX23_TorI2V_IDLora_TRIPLE_API.json` | T2V or I2V toggle with identity LoRA, triple-stage sampling. |
 | `LTX23_FLF-I2V_TRIPLE_API.json` | First and last frame I2V, triple-stage sampling. |
 | `LTX23_FLF-A-I2V_TRIPLE_API.json` | First and last frame A-I2V with audio, triple-stage sampling. |
+| `LTX23_ReDub_IDLora_API.json` | Re-dub an existing video with new audio using identity LoRA. |
+| `LTX23_V2V_AnyToReal.json` | Video-to-video style transfer — any style to realistic output. |
+| `LTX23_V2V_Outpaint.json` | Video outpainting — extends video frames spatially. |
+| `LTX23_LatentLooping_1Ref.json` | Latent looping with one reference — iterative generation using prior output as guide. |
 
 ### LTX23_HuMo/
 
@@ -91,15 +99,15 @@ Nodes are color coded by role for easier navigation:
 ## Pipeline Features
 
 All workflows share:
-- **RTX Video Super Resolution** — final output upscale (requires RTX GPU)
+- **RTX Video Super Resolution** — final output upscale (requires RTX GPU); easily removed if not needed
 - **LTXVChunkFeedForward** — chunked processing for longer clips
 - **ClownSampler / ClownsharKSampler** — advanced sampling
-- **LTXDimensionCalculator / LTXFrameCalculator** — dimension and frame count validation
+- **LTXDimensionCalculator / LTXFrameCalculator** — dimension and frame count validation; can be replaced with any input source
 - **FADE-labeled primitives** — exposed inputs for use with the FADE API layer
 
 Most workflows use a **two-stage generation** pipeline — low-res draft pass → latent upsample → full-res refinement. `1Stage_` workflows skip the first stage.
 
-`_TRIPLE` workflows use a **three-stage pipeline** — quarter res → half res → full res. Up to 4x faster than two-stage at comparable quality. Because the quarter-res stage requires div-by-32 dimensions, the final output resolution must be **divisible by 128**. No refined variants (HuMo/WAN22) are provided for triple-stage.
+`_TRIPLE` workflows use a **three-stage pipeline** — quarter res → half res → full res, with three independent samplers and schedulers. Up to 4x faster than two-stage at comparable quality. Because the quarter-res stage requires div-by-32 dimensions, the final output resolution must be **divisible by 128**. No refined variants (HuMo/WAN22) are provided for triple-stage.
 
 `TorI2V` workflows use a **boolean toggle** (`T2V True` / `I2V False`) to switch between text-to-video and image-to-video mode in a single workflow.
 
@@ -114,7 +122,9 @@ The **HuMo Long Edge** input controls the resolution fed to the HuMo model. Reco
 
 **Choosing compatible dimensions is non-trivial.** LTX, HuMo, and the rescale step each impose constraints, and the interaction between them — particularly across different workflow types — means a combination that works in one workflow may fail in another. Expect to test combinations rather than derive them from first principles. Known working baseline: LTX `2560×1440`, HuMo long edge `1920`.
 
-WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no MelBandRoFormer, no Whisper, no HuMo model.
+WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no MelBandRoFormer, no Whisper, no HuMo model. The `WAN 2.2 LN Steps` input controls the number of refinement steps.
+
+> **Note on refinement stages:** While dimension and frame calculator nodes can be freely swapped, refinement stages (HuMo, WAN22) have strict dimensionality requirements. Latents fed into refinement must be correctly sized or generation will fail.
 
 ## Dependencies
 
@@ -123,15 +133,22 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 | Node Pack | Nodes Used | Repo |
 |-----------|-----------|------|
 | **ComfyUI-LTXVideo** | All `LTXV*` / `LTX2*` nodes | https://github.com/Lightricks/ComfyUI-LTXVideo |
-| **ComfyUI-KJNodes** | `VAELoaderKJ`, `DiffusionModelLoaderKJ`, `ManualSigmas`, `GuiderParameters`, `GetImageSize`, `GetImageSizeAndCount`, `VRAM_Debug`, `LoadAndResizeImage`, `LazySwitchKJ`, `LTXVImgToVideoInplaceKJ`, `BatchImagesNode` | https://github.com/kijai/ComfyUI-KJNodes |
+| **ComfyUI-KJNodes** | `VAELoaderKJ`, `DiffusionModelLoaderKJ`, `ManualSigmas`, `GuiderParameters`, `GetImageSizeAndCount`, `VRAM_Debug`, `LoadAndResizeImage`, `LazySwitchKJ`, `LTXVImgToVideoInplaceKJ`, `BatchImagesNode`, `ImageConcatMulti`, `ImagePadKJ`, `ColorMatchV2` | https://github.com/kijai/ComfyUI-KJNodes |
 | **RES4LYF** | `ClownSampler_Beta`, `ClownsharKSampler_Beta`, `ClownOptions_ExtraOptions_Beta`, `Sigmas Resample`, `Sigmas Rescale`, `Sigmas Split Value`, `Linear Quadratic Advanced`, `FloatConstant` | https://github.com/ClownsharkBatwing/RES4LYF |
 | **ComfyUI_essentials** | `SimpleMath+`, `ImageFromBatch` | https://github.com/cubiq/ComfyUI_essentials |
 | **ComfyUI-VideoHelperSuite** | `VHS_LoadAudioUpload`, `VHS_LoadVideo`, `VHS_VideoInfoSource`, `VHS_SelectEveryNthImage`, `VHS_VideoCombine` | https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite |
 | **ComfyUI-WanVideoWrapper** | `NormalizeAudioLoudness` | https://github.com/kijai/ComfyUI-WanVideoWrapper |
-| **ComfyUI-LTXDimensionCalculator** | `LTXDimensionCalculator`, `LTXFrameCalculator` | https://github.com/ckinpdx/ComfyUI-LTXDimensionCalculator |
+| **ComfyUI-LTXAVTools** | `LTXDimensionCalculator`, `LTXDimensionCalculator3Stage`, `LTXFrameCalculator`, `LTXAudioLatentTrim`, `LatentStripMask` | https://github.com/ckinpdx/ComfyUI-LTXAVTools |
 | **Nvidia RTX Nodes** | `RTXVideoSuperResolution` | https://github.com/Comfy-Org/Nvidia_RTX_Nodes_ComfyUI |
 
-
+> **NormalizeAudioLoudness bug:** If the audio input is very short or near-silence, the BS.1770 loudness measurement returns NaN/inf, producing a poisoned tensor that silently passes through and crashes the video save node with `[Errno 22]` during AAC encoding. Fix in `ComfyUI-WanVideoWrapper/nodes_utility.py`:
+> ```python
+> # before
+> if abs(loudness) > 100:
+> # after
+> if not np.isfinite(loudness) or abs(loudness) > 100:
+> ```
+> The node will then return audio unchanged rather than passing a NaN tensor downstream.
 
 ### HuMo workflows (additional)
 
@@ -146,7 +163,17 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 
 | Node Pack | Nodes Used | Repo |
 |-----------|-----------|------|
-| **ComfyUI-KJNodes** | `ColorMatchV2` (additional node — pack already required above) | https://github.com/kijai/ComfyUI-KJNodes |
+| **ComfyUI-KJNodes** | `ColorMatchV2` (pack already required above) | https://github.com/kijai/ComfyUI-KJNodes |
+
+### Specialized workflows (additional)
+
+Used by `LTX23_LatentLooping_1Ref.json` only:
+
+| Node Pack | Nodes Used | Repo |
+|-----------|-----------|------|
+| **ComfyUI-Easy-Use** | `easy forLoopStart`, `easy forLoopEnd`, `easy showAnything` | https://github.com/yolain/ComfyUI-Easy-Use |
+| **ComfyUI-NativeLooping_testing** | `TensorLoopOpen`, `TensorLoopClose` | https://github.com/kijai/ComfyUI-NativeLooping_testing |
+| **comfyui-various** | `JWStringGetLine` | https://github.com/jamesWalker55/comfyui-various |
 
 ## Required Models
 
@@ -161,7 +188,7 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 | `LTX23_audio_vae_bf16.safetensors` | LTX 2.3 audio VAE |
 | `ltx-2.3-spatial-upscaler-x2-1.1.safetensors` | LTX 2.3 spatial upscaler (2x) |
 | `ltx-2.3-22b-distilled-lora-384.safetensors` | LTX 2.3 distilled LoRA (in two-stage workflows, loaded twice at different weights per stage) |
-| `ltx-2.3-id-lora-celebvhq-3k.safetensors` | Identity LoRA for reference audio consistency (`IDLora` workflows) |
+| `ltx-2.3-id-lora-celebvhq-3k.safetensors` | Identity LoRA for audio/voice consistency (`IDLora` workflows) |
 
 ### HuMo workflows (additional)
 
@@ -183,3 +210,9 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 | `umt5_xxl_fp8_e4m3fn_scaled.safetensors` | UMT5-XXL text encoder |
 | `lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors` | LightX2V distilled LoRA |
 
+### Specialized workflows (additional)
+
+| Model | Used By | Role |
+|-------|---------|------|
+| `ltx23_anime2real_rank64_v1_4500.safetensors` | `V2V_AnyToReal` | Style transfer LoRA — any style to realistic |
+| `ltx-2.3-22b-ic-lora-outpaint.safetensors` | `V2V_Outpaint` | IC-LoRA for spatial video outpainting |
