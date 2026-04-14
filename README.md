@@ -9,7 +9,7 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 ## Naming Convention
 
 ```
-[1Stage_] LTX23 [_A-] [TorI2V | _FLF-I2V | _FLF-A-I2V | _Continuation | _ReDub | _V2V_* | _LatentLooping_*] [_IDLora] [_HuMo | _WAN22 | _TRIPLE] _API
+[1Stage_] LTX23 [_A-] [TorI2V | _FLF-I2V | _FLF-A-I2V | _Continuation | _ReDub | _V2V_* | _LatentLooping_*] [_TTS] [_IDLora] [_HuMo | _WAN22 | _TRIPLE] _API
 ```
 
 | Segment | Meaning |
@@ -25,6 +25,7 @@ Core pipeline: two-stage latent upsampling with RTX Video Super Resolution outpu
 | `_ReDub` | Re-dub an existing video with new audio using identity LoRA |
 | `_V2V` | Video to video — transforms existing video content |
 | `_LatentLooping` | Latent looping — iterative generation using prior output as reference |
+| `_TTS` | Text-to-speech audio generation — audio-only output via LTX audio latent space |
 | `_IDLora` | Identity LoRA — audio/voice consistency via reference |
 | `_HuMo` | Includes human motion module (see dependencies) |
 | `_WAN22` | Wan 2.2 low-noise refinement pass instead of HuMo (see dependencies) |
@@ -55,6 +56,8 @@ Base workflows — LTX 2.3 only, no motion refinement.
 | `LTX23_V2V_AnyToReal.json` | Video-to-video style transfer — any style to realistic output. |
 | `LTX23_V2V_Outpaint.json` | Video outpainting — extends video frames spatially. |
 | `LTX23_LatentLooping_1Ref.json` | Latent looping with one reference — iterative generation using prior output as guide. |
+| `LTX23_LatentLooping_TTS.json` | TTS latent looping — audio-only output via LTX audio latent space. |
+| `LTX23_LatentLooping_TTS_IDLora.json` | TTS latent looping with identity LoRA for voice consistency. |
 
 ### LTX23_HuMo/
 
@@ -154,7 +157,6 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 
 | Node Pack | Nodes Used | Repo |
 |-----------|-----------|------|
-| **WanExperiments** | `WanEx_HuMoImageToVideo`, `WanEx_ContextWindowsAdvanced` | https://github.com/drozbay/WanExperiments |
 | **ComfyUI-MelBandRoFormer** | `MelBandRoFormerModelLoader`, `MelBandRoFormerSampler` | https://github.com/kijai/ComfyUI-MelBandRoFormer |
 
 > `VHS_SelectEveryNthImage` (VideoHelperSuite) is used to downsample 50 FPS generation to 25 FPS required by HuMo.
@@ -167,13 +169,18 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 
 ### Specialized workflows (additional)
 
-Used by `LTX23_LatentLooping_1Ref.json` only:
+Used by all `LatentLooping` variants:
 
 | Node Pack | Nodes Used | Repo |
 |-----------|-----------|------|
 | **ComfyUI-Easy-Use** | `easy forLoopStart`, `easy forLoopEnd`, `easy showAnything` | https://github.com/yolain/ComfyUI-Easy-Use |
-| **ComfyUI-NativeLooping_testing** | `TensorLoopOpen`, `TensorLoopClose` | https://github.com/kijai/ComfyUI-NativeLooping_testing |
 | **comfyui-various** | `JWStringGetLine` | https://github.com/jamesWalker55/comfyui-various |
+
+Used by `LTX23_LatentLooping_1Ref.json` only:
+
+| Node Pack | Nodes Used | Repo |
+|-----------|-----------|------|
+| **ComfyUI-NativeLooping_testing** | `TensorLoopOpen`, `TensorLoopClose` | https://github.com/kijai/ComfyUI-NativeLooping_testing |
 
 ## Required Models
 
@@ -216,3 +223,4 @@ Used by `LTX23_LatentLooping_1Ref.json` only:
 |-------|---------|------|
 | `ltx23_anime2real_rank64_v1_4500.safetensors` | `V2V_AnyToReal` | Style transfer LoRA — any style to realistic |
 | `ltx-2.3-22b-ic-lora-outpaint.safetensors` | `V2V_Outpaint` | IC-LoRA for spatial video outpainting |
+| `LTX-2.3-ID-LoRA-TalkVid-3K.safetensors` | `LatentLooping_TTS_IDLora` | Identity LoRA for talking video voice consistency |
