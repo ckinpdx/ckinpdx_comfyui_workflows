@@ -73,6 +73,16 @@ LTX 2.3 + HuMo human motion conditioning. Requires additional models (see below)
 | `1Stage_LTX23_A-I2V_HuMo_API.json` | Single-stage audio + image-to-video with HuMo. |
 | `LTX23_Continuation_HuMo_API.json` | Video continuation with HuMo human motion. |
 
+### LTX23_CharacterBuilder/
+
+Workflows for building a character LoRA with voice from a single image and a single voice clip. Not structured for API export — the LLM prompt workflows use subgraphs.
+
+| File | Description |
+|------|-------------|
+| `LTX23_CharacterLoraCreation.json` | Trains a character LoRA (video + audio) from one image and one voice clip using Musubi-tuner. |
+| `QIE_8xCharacterSheet.json` | Generates an 8-panel character sheet via Qwen image edit for use as training reference. |
+| `TTSAudioSuite_CharacterVoiceBuilder.json` | Builds character voice samples using IndexTTS for LoRA audio training data. |
+
 ### LTX23_WAN22/
 
 LTX 2.3 + Wan 2.2 low-noise refinement. A simpler alternative to HuMo — no audio separation or motion model required.
@@ -167,6 +177,19 @@ WAN22 workflows use **Wan 2.2 low-noise refinement** in place of HuMo — no Mel
 |-----------|-----------|------|
 | **ComfyUI-KJNodes** | `ColorMatchV2` (pack already required above) | https://github.com/kijai/ComfyUI-KJNodes |
 
+### CharacterBuilder workflows (additional)
+
+| Node Pack | Nodes Used | Repo |
+|-----------|-----------|------|
+| **TTS-Audio-Suite** | `IndexTTSEngineNode`, `IndexTTSEmotionOptionsNode`, `UnifiedTTSTextNode`, `VocalRemovalNode` | https://github.com/diodiogod/TTS-Audio-Suite |
+| **ComfyUI-OllamaOmni** | `OllamaConnectivityV2`, `OllamaGenerateV2`, `OllamaOptionsV2`, `OllamaUnloadModel` | https://github.com/ckinpdx/ComfyUI-OllamaOmni |
+| **ComfyUI-Custom-Scripts** | `ShowText\|pysssss` | https://github.com/pythongosssss/ComfyUI-Custom-Scripts |
+| **ComfyUI-LTXAVTools** | `LTXAV_CharacterLoraTraining`, `LTXAV_AudioLoraTraining` (pack already required above) | https://github.com/ckinpdx/ComfyUI-LTXAVTools |
+| **comfyui-various** | `JWStringGetLine` (pack already listed below) | https://github.com/jamesWalker55/comfyui-various |
+| **ComfyUI-Easy-Use** | `easy forLoopStart`, `easy forLoopEnd` (pack already listed below) | https://github.com/yolain/ComfyUI-Easy-Use |
+
+> **System requirements:** `LTX23_CharacterLoraCreation.json` requires [Musubi-tuner](https://github.com/AkaneTendo25/musubi-tuner) installed as a system-level trainer (not a ComfyUI node pack) — the LoRA training nodes invoke it directly. OllamaOmni nodes require [Ollama](https://ollama.com) running as a local service with `nvidia/nemotron3-omni:33b` pulled from the Ollama library.
+
 ### Specialized workflows (additional)
 
 Used by all `LatentLooping` variants:
@@ -224,3 +247,11 @@ Used by `LTX23_LatentLooping_1Ref.json` only:
 | `ltx23_anime2real_rank64_v1_4500.safetensors` | `V2V_AnyToReal` | Style transfer LoRA — any style to realistic |
 | `ltx-2.3-22b-ic-lora-outpaint.safetensors` | `V2V_Outpaint` | IC-LoRA for spatial video outpainting |
 | `LTX-2.3-ID-LoRA-TalkVid-3K.safetensors` | `LatentLooping_TTS_IDLora` | Identity LoRA for talking video voice consistency |
+
+### CharacterBuilder workflows (additional)
+
+| Model | Used By | Role |
+|-------|---------|------|
+| `ltx-2.3-22b-dev.safetensors` | `LTX23_CharacterLoraCreation` | Full-precision LTX 2.3 model for LoRA training (path: `C:\musubi_tuner\...`) |
+| `Qwen-Rapid-AIO-NSFW-v23.safetensors` | `QIE_8xCharacterSheet` | Qwen checkpoint for character sheet image generation |
+| `anything2real_2601.safetensors` | `QIE_8xCharacterSheet` | Style transfer model for character sheet rendering |
